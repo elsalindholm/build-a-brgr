@@ -1,8 +1,5 @@
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
   padding: 0;
 }
@@ -14,4 +11,18 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.body {
+  height: 90vh;
+  width: 100vw;
+
+  border: 1px solid green;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.main-page-holder {
+  min-height: 70vh;
+  width: 100%;
 }

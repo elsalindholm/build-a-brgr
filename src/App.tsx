@@ -11,8 +11,10 @@ export class App extends React.PureComponent {
     return (
       <div>
         <Header />
-        <div></div>
-        <Footer />
+        <div className={'body'}>
+          <div className={'main-page-holder'}>Body</div>
+          <Footer />
+        </div>
       </div>
     );
   }
