@@ -7,7 +7,7 @@ interface HeaderProps {
 }
 
 export class Header extends React.PureComponent<HeaderProps> {
-  render() {
+  public render() {
     const { appState } = this.props;
 
     return (

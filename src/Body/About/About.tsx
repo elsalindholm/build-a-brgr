@@ -1,8 +1,8 @@
 import React from 'react';
 import './about.scss';
 
-export class AboutPage extends React.PureComponent {
-  render() {
+export class About extends React.PureComponent {
+  public render() {
     return (
       <div className={'about-page'}>
         <div className={'about-title'}>
