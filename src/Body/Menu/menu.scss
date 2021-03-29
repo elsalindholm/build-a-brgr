@@ -1,0 +1,52 @@
+@import '../../app-styles.scss';
+
+.menu-page {
+  height: 100%;
+  width: 100%;
+
+  background-color: $light-background;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-header {
+  width: 100%;
+  height: 5vh;
+
+  border-top: 1px solid lightgray;
+  background-color: $dark-background;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-nb-button-container {
+  height: 100%;
+  width: 25%;
+
+  //border: 1px solid purple;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menu-nb-button {
+  background-color: $dark-background;
+  color: $light-text;
+
+  border: none;
+}
+
+.menu-sub-page-container {
+  width: 70%;
+  height: 70vh;
+
+  color: $light-text;
+}

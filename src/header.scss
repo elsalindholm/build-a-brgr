@@ -5,7 +5,8 @@
   width: 100vw;
   padding: 0px 20px;
 
-  border: 1px solid red;
+  //border: 1px solid red;
+  background-color: $dark-background;
 
   display: flex;
   flex-direction: row;
@@ -16,14 +17,16 @@
 .logo-container {
   height: 80%;
   width: 15%;
-  border: 1px solid green;
+  padding: 15px;
+  //border: 1px solid green;
+  color: $light-text;
 }
 
 .nb-button-container {
   height: 50%;
   width: 40%;
 
-  border: 1px solid purple;
+  //border: 1px solid purple;
 
   display: flex;
   flex-direction: row;
@@ -31,11 +34,18 @@
   align-items: center;
 }
 
+.nb-button {
+  background-color: $dark-background;
+  color: $light-text;
+
+  border: none;
+}
+
 .cart-container {
   height: 50%;
   width: 15%;
 
-  border: 1px solid pink;
+  //border: 1px solid pink;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

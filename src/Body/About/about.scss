@@ -1,0 +1,30 @@
+@import '../../app-styles.scss';
+
+.about-page {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $light-background;
+}
+
+.about-title {
+  height: 12vh;
+  width: 70%;
+  padding: 20px;
+
+  border: 1px solid white;
+  color: $light-text;
+  text-align: center;
+}
+
+.about-blurb {
+  height: 40vh;
+  width: 70%;
+
+  border: 1px solid white;
+}

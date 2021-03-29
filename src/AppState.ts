@@ -1,9 +1,15 @@
 import { action, observable } from 'mobx';
 
-export class AppState {
-  @observable public count = 0;
+export enum Page {
+  HOME = 'home',
+  ABOUT = 'about',
+  MENU = 'menu',
+}
 
-  @action incCount() {
-    this.count++;
+export class AppState {
+  @observable public currentPage = Page.MENU;
+
+  @action public setCurrentPage(page: Page) {
+    this.currentPage = page;
   }
 }

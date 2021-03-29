@@ -1,8 +1,15 @@
 import React from 'react';
+import { Page, AppState } from './AppState';
 import './header.scss';
 
-export class Header extends React.PureComponent {
+interface HeaderProps {
+  appState: AppState;
+}
+
+export class Header extends React.PureComponent<HeaderProps> {
   render() {
+    const { appState } = this.props;
+
     return (
       <div className={'header-container'}>
         <div className={'logo-container'}>
@@ -12,13 +19,19 @@ export class Header extends React.PureComponent {
         </div>
         <div className={'nb-button-container'}>
           <div>
-            <button>Home</button>
+            <button className={'nb-button'} onClick={() => appState.setCurrentPage(Page.HOME)}>
+              Home
+            </button>
           </div>
           <div>
-            <button>Menu</button>
+            <button className={'nb-button'} onClick={() => appState.setCurrentPage(Page.MENU)}>
+              Menu
+            </button>
           </div>
           <div>
-            <button>About</button>
+            <button className={'nb-button'} onClick={() => appState.setCurrentPage(Page.ABOUT)}>
+              About
+            </button>
           </div>
         </div>
         <div className={'cart-container'}>
