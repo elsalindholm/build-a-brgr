@@ -7,7 +7,9 @@ export class Home extends React.PureComponent {
     return (
       <div className={'home-page'}>
         <div className={'home-page-title'}>Welcome to Build-A-BRGR</div>
-        <div className={'burger-image-container'}></div>
+        <div className={'burger-image-container'}>
+          <img src={'/Assets/burger.png'} />
+        </div>
         <div className={'home-pg-blurb'}>
           Build a burger and get it delivered straight to your door!
         </div>
@@ -16,7 +18,9 @@ export class Home extends React.PureComponent {
           suit various dietary requirements!
         </div>
         <div className={'home-pg-blurb-map'}>
-          <div className={'map-image-container'}></div>
+          <div className={'map-image-container'}>
+            <img src={'/Assets/map.png'} />
+          </div>
           <div className={'map-blurb-container'}>
             We currently deliver within the Falkirk Council area. We are also looking into expanding
             into Edinburgh and Glasgow. Please sign up to our newsletter to receive further updates

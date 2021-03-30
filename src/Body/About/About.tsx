@@ -19,6 +19,7 @@ export class About extends React.PureComponent {
             in 2020 and we are hoping to expand further across the Central Belt and into Glasgow and
             Edinburgh.
           </p>
+          <img src={'/Assets/map.png'} />
         </div>
         <div className={'sustainability-info'}>
           <div className={'sustainability-info-title'}>Sustainability</div>
@@ -40,6 +41,19 @@ export class About extends React.PureComponent {
                 <li>we offset our carbon footprint through our partner</li>
               </ul>
             </div>
+          </div>
+        </div>
+        <div className={'get-in-touch-container'}>
+          <div>
+            <div>Get in touch</div>
+            <img src={'/Assets/phone.png'} />
+          </div>
+          <div>Questions, feedback, suggestions or just want to say hello?</div>
+          <div>Send us an email and info@buildabrgr.co.uk</div>
+          <div>You can also follow us on Instagram.</div>
+          <div>
+            Sign up to our newsletter to receive information about special deals and delicious
+            additions to our menu!
           </div>
         </div>
       </div>
