@@ -1,8 +1,8 @@
 @import './app-styles.scss';
 
 .header-container {
-  height: 10vh;
-  width: 100vw;
+  height: 10%;
+  width: 100%;
   padding: 0px 20px;
 
   //border: 1px solid red;
@@ -20,6 +20,9 @@
   padding: 15px;
   //border: 1px solid green;
   color: $light-text;
+  font-family: $monserrat;
+  font-weight: $weight-bold;
+  font-size: 25px;
 }
 
 .nb-button-container {
@@ -38,6 +41,10 @@
   background-color: $dark-background;
   color: $light-text;
 
+  font-family: $monserrat;
+  font-size: 20px;
+  font-weight: $weight-medium;
+
   border: none;
 }
 
@@ -53,8 +60,8 @@
 
 .cart-img-container {
   height: 100%;
-  width: 15%;
+  width: 17%;
 
   background-image: url('/Assets/shoppingCart.png');
-  background-size: cover;
+  background-size: contain;
 }

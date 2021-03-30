@@ -16,7 +16,7 @@
   width: 100%;
   height: 5vh;
 
-  border-top: 1px solid lightgray;
+  border-top: 3px solid $light-background;
   background-color: $dark-background;
 
   display: flex;
@@ -40,6 +40,10 @@
 .menu-nb-button {
   background-color: $dark-background;
   color: $light-text;
+
+  font-size: 15px;
+  font-family: $monserrat;
+  font-weight: $weight-medium;
 
   border: none;
 }

@@ -8,6 +8,8 @@ import { Menu } from './Body/Menu/Menu';
 import { Footer } from './Footer';
 import { Header } from './Header';
 
+import './app.scss';
+
 @observer
 export class App extends React.PureComponent {
   private readonly appState = new AppState();
@@ -30,13 +32,13 @@ export class App extends React.PureComponent {
     }
 
     return (
-      <div>
+      <>
         <Header appState={this.appState} />
         <div className={'body'}>
           <div className={'main-page-holder'}>{page}</div>
           <Footer />
         </div>
-      </div>
+      </>
     );
   }
 }

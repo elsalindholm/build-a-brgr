@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
 $dark-background: #08605f;
 $light-background: #598381;
 
 $light-text: #fff;
 $dark-text: #000;
+
+//imported as medium 500, semi-bold 600 and bold 700
+$monserrat: 'Montserrat', sans-serif;
+
+//imported as light 300 and regular 400
+$roboto: 'Roboto', sans-serif;
+
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semi-bold: 600;
+$weight-bold: 700;

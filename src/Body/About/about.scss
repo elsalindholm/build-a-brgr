@@ -13,18 +13,84 @@
 }
 
 .about-title {
-  height: 12vh;
   width: 70%;
   padding: 20px;
+  margin: 20px;
 
-  border: 1px solid white;
+  //border: 1px solid white;
+
   color: $light-text;
   text-align: center;
+  font-family: $monserrat;
+  font-weight: $weight-bold;
+  font-size: 50px;
 }
 
-.about-blurb {
-  height: 40vh;
+.about-blurb-container {
   width: 70%;
+  padding: 10px 100px;
+  margin: 20px;
 
-  border: 1px solid white;
+  color: $light-text;
+  text-align: center;
+  font-family: $monserrat;
+  font-weight: $weight-regular;
+  font-size: 25px;
+
+  //border: 1px solid white;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sustainability-info {
+  width: 70%;
+  padding: 10px 50px;
+  margin: 20px;
+
+  color: $light-text;
+
+  //border: 1px solid white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sustainability-info-title {
+  width: 100%;
+  margin: 20px;
+
+  text-align: left;
+  font-family: $monserrat;
+  font-weight: $weight-bold;
+  font-size: 35px;
+
+  //border: 1px solid white;
+}
+
+.sustainability-info-blurb {
+  width: 100%;
+  margin: 20px;
+
+  text-align: left;
+  font-family: $monserrat;
+  font-weight: $weight-medium;
+  font-size: 20px;
+
+  //border: 1px solid white;
+}
+
+.sustainability-info-list {
+  width: 70%;
+  margin: 20px;
+
+  text-align: left;
+  font-family: $monserrat;
+  font-weight: $weight-medium;
+  font-size: 15px;
+
+  //border: 1px solid white;
 }

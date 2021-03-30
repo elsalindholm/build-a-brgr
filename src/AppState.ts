@@ -13,7 +13,7 @@ export enum MenuPage {
 }
 
 export class AppState {
-  @observable public currentPage = Page.HOME;
+  @observable public currentPage = Page.ABOUT;
   @observable public currentMenuPage = MenuPage.BURGERS;
 
   @action public setCurrentPage(page: Page) {

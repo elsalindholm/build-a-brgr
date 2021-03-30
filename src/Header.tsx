@@ -13,9 +13,7 @@ export class Header extends React.PureComponent<HeaderProps> {
     return (
       <div className={'header-container'}>
         <div className={'logo-container'}>
-          <div>
-            <h2>Build-A-BRGR</h2>
-          </div>
+          <div>Build-A-BRGR</div>
         </div>
         <div className={'nb-button-container'}>
           <div>
