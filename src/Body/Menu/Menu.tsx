@@ -2,7 +2,7 @@ import { observer } from 'mobx-react';
 import React from 'react';
 
 import { AppState, MenuPage } from '../../AppState';
-import { BurgerPage } from './Burgers';
+import { BurgersPage } from './Burgers';
 import { SidesPage } from './Sides';
 import { DrinksPage } from './Drinks';
 
@@ -18,7 +18,7 @@ export class Menu extends React.PureComponent<MenuProps> {
     let menuPage: JSX.Element;
     switch (this.props.appState.currentMenuPage) {
       case MenuPage.BURGERS:
-        menuPage = <BurgerPage />;
+        menuPage = <BurgersPage />;
         break;
       case MenuPage.SIDES:
         menuPage = <SidesPage />;
@@ -27,7 +27,7 @@ export class Menu extends React.PureComponent<MenuProps> {
         menuPage = <DrinksPage />;
         break;
       default:
-        menuPage = <BurgerPage />;
+        menuPage = <BurgersPage />;
         break;
     }
 

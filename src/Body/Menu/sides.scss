@@ -1,0 +1,24 @@
+@import '../../app-styles.scss';
+
+.sides-page {
+  //border: 1px solid white;
+  width: 100%;
+
+  text-align: center;
+  font-family: $monserrat;
+  color: $light-text;
+}
+
+.sides-page-title {
+  margin: 20px;
+
+  font-size: 55px;
+  font-weight: $weight-bold;
+}
+
+.sides-page-blurb {
+  margin: 20px;
+
+  font-size: 20px;
+  font-weight: $weight-regular;
+}

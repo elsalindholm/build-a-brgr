@@ -44,14 +44,13 @@ export class About extends React.PureComponent {
           </div>
         </div>
         <div className={'get-in-touch-container'}>
-          <div>
-            <div>Get in touch</div>
-            <img src={'/Assets/phone.png'} />
+          <div className={'get-in-touch-title'}>Get in touch</div>
+          <div className={'get-in-touch-blurb'}>
+            Questions, feedback, suggestions or just want to say hello?
           </div>
-          <div>Questions, feedback, suggestions or just want to say hello?</div>
-          <div>Send us an email and info@buildabrgr.co.uk</div>
-          <div>You can also follow us on Instagram.</div>
-          <div>
+          <div className={'get-in-touch-blurb'}>Send us an email and info@buildabrgr.co.uk</div>
+          <div className={'get-in-touch-blurb'}>You can also follow us on Instagram.</div>
+          <div className={'get-in-touch-blurb'}>
             Sign up to our newsletter to receive information about special deals and delicious
             additions to our menu!
           </div>
