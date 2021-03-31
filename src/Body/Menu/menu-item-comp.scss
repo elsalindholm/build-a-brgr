@@ -1,0 +1,71 @@
+@import '../../app-styles.scss';
+
+.menu-item {
+  height: 40vh;
+  width: 15vw;
+
+  border: 1px solid white;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  color: $light-text;
+  font-family: $monserrat;
+
+  .img {
+    height: 18vh;
+    width: 10vw;
+
+    border: 1px solid yellow;
+  }
+  .name {
+    font-size: 20px;
+    font-weight: $weight-regular;
+  }
+
+  .dietary-info {
+    width: 50%;
+
+    font-size: 15px;
+    font-weight: $weight-regular;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .vegetarian {
+      width: 40px;
+      height: 40px;
+      padding: 7%;
+
+      border: 3px solid $light-text;
+      border-radius: 100%;
+    }
+
+    .vegan {
+      width: 40px;
+      height: 40px;
+      padding: 6%;
+
+      border: 3px solid $light-text;
+      border-radius: 100%;
+    }
+  }
+
+  .price {
+    font-size: 20px;
+    font-weight: $weight-regular;
+  }
+  .button {
+    padding: 5px 10px;
+
+    background-color: $dark-background;
+    color: $light-text;
+    border: 3px solid $light-text;
+    border-radius: 10px;
+  }
+}

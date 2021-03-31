@@ -22,3 +22,10 @@
   font-size: 20px;
   font-weight: $weight-regular;
 }
+
+.sides-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+}
