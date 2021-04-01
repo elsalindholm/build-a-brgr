@@ -6,6 +6,7 @@ import './cart.scss';
 
 import { fries } from './MenuItems';
 import { CartItem } from './CartItem';
+import { observer } from 'mobx-react';
 
 interface CartProps {
   open: boolean;
@@ -13,6 +14,7 @@ interface CartProps {
   cartState: CartState;
 }
 
+@observer
 export class Cart extends React.PureComponent<CartProps> {
   public render() {
     const { open, onClose } = this.props;

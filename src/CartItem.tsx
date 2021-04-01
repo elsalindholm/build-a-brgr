@@ -1,5 +1,5 @@
 import React from 'react';
-import { CartState } from './CartState';
+
 import { MenuItem } from './MenuItems';
 
 import './cart-item.scss';
