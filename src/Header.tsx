@@ -33,7 +33,7 @@ export class Header extends React.PureComponent<HeaderProps> {
           </div>
         </div>
         <div className={'cart-container'}>
-          <div className={'cart-img-container'}></div>
+          <div className={'cart-img-container'} onClick={() => appState.setCartOpen(true)}></div>
         </div>
       </div>
     );

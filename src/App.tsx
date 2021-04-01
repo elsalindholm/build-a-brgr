@@ -9,6 +9,7 @@ import { Footer } from './Footer';
 import { Header } from './Header';
 
 import './app.scss';
+import { Cart } from './Cart';
 
 @observer
 export class App extends React.PureComponent {
@@ -33,6 +34,11 @@ export class App extends React.PureComponent {
 
     return (
       <>
+        <Cart
+          open={this.appState.cartOpen}
+          onClose={() => this.appState.setCartOpen(false)}
+          cartState={this.appState.cartState}
+        />
         <Header appState={this.appState} />
         <div className={'body'}>
           <div className={'main-page-holder'}>{page}</div>
