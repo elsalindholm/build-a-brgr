@@ -1,0 +1,14 @@
+@import './app-styles.scss';
+
+.cart-item {
+  height: 15%;
+  width: 90%;
+  padding: 5px 10px;
+
+  border: 1px solid green;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

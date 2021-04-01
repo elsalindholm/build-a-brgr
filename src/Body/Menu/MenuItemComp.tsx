@@ -1,10 +1,14 @@
 import React from 'react';
+import { AppState } from '../../AppState';
+import { CartState } from '../../CartState';
+
 import { MenuItem } from '../../MenuItems';
 
 import './menu-item-comp.scss';
 
-interface MicProps {
+export interface MicProps {
   menuItem: MenuItem;
+  appState: AppState;
 }
 
 export class MenuItemComp extends React.PureComponent<MicProps> {
@@ -18,7 +22,12 @@ export class MenuItemComp extends React.PureComponent<MicProps> {
           {this.props.menuItem.vegan && <div className={'vegan'}>VG</div>}
         </div>
         <div className={'price'}>£ {this.props.menuItem.price}</div>
-        <button className={'button'}>Add to cart</button>
+        <button
+          className={'button'}
+          onClick={() => this.props.appState.cartState.addToCart(this.props.menuItem)}
+        >
+          Add to cart
+        </button>
       </div>
     );
   }

@@ -1,11 +1,23 @@
+@import './app-styles.scss';
+
 .cart {
   width: 300px;
   height: 500px;
   position: absolute;
   background-color: white;
+  border: 3px solid $dark-background;
+  border-radius: 15px;
   top: 0;
   right: 0;
   transition: all 0.5s ease-in-out;
+
+  font-family: $monserrat;
+  font-weight: $weight-bold;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 
   &.open {
     transform: translateX(0);
@@ -13,5 +25,68 @@
 
   &.closed {
     transform: translateX(1000px);
+  }
+
+  .header {
+    width: 90%;
+
+    margin: 10px;
+    padding: 5px;
+
+    border: 1px solid red;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+  }
+
+  .close-cart {
+    .close-cart-button {
+      padding: 5px;
+      border-radius: 10px;
+      border: 3px solid white;
+
+      background-color: $dark-background;
+      color: $light-text;
+    }
+  }
+
+  .display {
+    width: 90%;
+    height: 70%;
+    border-top: 3px solid $light-background;
+    border-bottom: 3px solid $light-background;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .footer {
+    width: 90%;
+
+    margin: 10px;
+    padding: 5px;
+
+    border: 1px solid red;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .order-button {
+      padding: 5px;
+      border-radius: 10px;
+      border: 3px solid white;
+
+      background-color: $dark-background;
+      color: $light-text;
+    }
   }
 }

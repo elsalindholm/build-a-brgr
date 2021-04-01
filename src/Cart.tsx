@@ -4,6 +4,9 @@ import { CartState } from './CartState';
 
 import './cart.scss';
 
+import { fries } from './MenuItems';
+import { CartItem } from './CartItem';
+
 interface CartProps {
   open: boolean;
   onClose: () => void;
@@ -25,14 +28,23 @@ export class Cart extends React.PureComponent<CartProps> {
             </button>
           </div>
         </div>
-        <div>Cart items will appear here</div>
+        <div className={'display'}>{this.renderCartItems()}</div>
         <div className={'footer'}>
           <div> Price</div>
           <div>
-            <button className={'order-button'}>Order</button>
+            <button className={'order-button'}>ORDER</button>
           </div>
         </div>
       </div>
     );
+  }
+
+  private renderCartItems() {
+    const items: JSX.Element[] = [];
+
+    this.props.cartState.cartItems.forEach((item) => {
+      items.push(<CartItem cartItem={item} />);
+    });
+    return items;
   }
 }

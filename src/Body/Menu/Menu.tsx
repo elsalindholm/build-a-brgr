@@ -21,10 +21,10 @@ export class Menu extends React.PureComponent<MenuProps> {
         menuPage = <BurgersPage />;
         break;
       case MenuPage.SIDES:
-        menuPage = <SidesPage />;
+        menuPage = <SidesPage appState={this.props.appState} />;
         break;
       case MenuPage.DRINKS:
-        menuPage = <DrinksPage />;
+        menuPage = <DrinksPage appState={this.props.appState} />;
         break;
       default:
         menuPage = <BurgersPage />;
