@@ -19,7 +19,7 @@ export const fries: MenuItem = {
 export const sweetPotatoFries: MenuItem = {
   id: '1',
   name: 'Sweet Potato Fries',
-  price: 6.49,
+  price: 6,
   vegetarian: true,
   vegan: true,
 };
@@ -35,7 +35,7 @@ export const houseSlaw: MenuItem = {
 export const kimchiFries: MenuItem = {
   id: '4',
   name: 'Kimchi Fries',
-  price: 6.5,
+  price: 6,
   vegetarian: true,
   vegan: false,
 };
@@ -53,7 +53,7 @@ export const pepsiDrink: MenuItem = {
 export const lemonade: MenuItem = {
   id: '6',
   name: 'Lemonade',
-  price: 2.49,
+  price: 2,
   vegetarian: true,
   vegan: false,
 };
@@ -61,7 +61,7 @@ export const lemonade: MenuItem = {
 export const fizzyElderflower: MenuItem = {
   id: '7',
   name: 'Elderflower Fizz',
-  price: 3.49,
+  price: 3,
   vegetarian: true,
   vegan: true,
 };

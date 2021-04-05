@@ -56,12 +56,20 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-}
+  align-items: center;
 
-.cart-img-container {
-  height: 100%;
-  width: 17%;
+  .header-price {
+    padding: 0px 10px;
+    font-style: italic;
+    color: white;
+    font-family: $monserrat;
+  }
 
-  background-image: url('/Assets/shoppingCart.png');
-  background-size: contain;
+  .cart-img-container {
+    height: 100%;
+    width: 18%;
+
+    background-image: url('/Assets/shoppingCart.png');
+    background-size: contain;
+  }
 }

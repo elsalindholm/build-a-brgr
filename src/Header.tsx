@@ -1,3 +1,4 @@
+import { observer } from 'mobx-react';
 import React from 'react';
 import { Page, AppState } from './AppState';
 import './header.scss';
@@ -6,6 +7,7 @@ interface HeaderProps {
   appState: AppState;
 }
 
+@observer
 export class Header extends React.PureComponent<HeaderProps> {
   public render() {
     const { appState } = this.props;
@@ -33,6 +35,7 @@ export class Header extends React.PureComponent<HeaderProps> {
           </div>
         </div>
         <div className={'cart-container'}>
+          <div className={'header-price'}>Total £ {appState.cartState.totalPrice}</div>
           <div className={'cart-img-container'} onClick={() => appState.setCartOpen(true)}></div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 @import './app-styles.scss';
 
 .cart {
-  width: 300px;
-  height: 500px;
+  width: 400px;
+  height: 600px;
   position: absolute;
   background-color: white;
   border: 3px solid $dark-background;
@@ -33,7 +33,7 @@
     margin: 10px;
     padding: 5px;
 
-    border: 1px solid red;
+    //border: 1px solid red;
 
     display: flex;
     flex-direction: row;
@@ -65,6 +65,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   .footer {
@@ -73,7 +75,7 @@
     margin: 10px;
     padding: 5px;
 
-    border: 1px solid red;
+    //border: 1px solid red;
 
     display: flex;
     flex-direction: row;
