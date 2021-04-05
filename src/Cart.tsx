@@ -32,7 +32,7 @@ export class Cart extends React.PureComponent<CartProps> {
         </div>
         <div className={'display'}>{this.renderCartItems()}</div>
         <div className={'footer'}>
-          <div> Price</div>
+          <div>TOTAL £ {this.props.cartState.totalPrice}</div>
           <div>
             <button className={'order-button'}>ORDER</button>
           </div>
@@ -44,8 +44,8 @@ export class Cart extends React.PureComponent<CartProps> {
   private renderCartItems() {
     const items: JSX.Element[] = [];
 
-    this.props.cartState.cartItems.forEach((item) => {
-      items.push(<CartItem cartItem={item} />);
+    this.props.cartState.cartItems.forEach((item, idx) => {
+      items.push(<CartItem cartItem={item} position={idx} cartState={this.props.cartState} />);
     });
     return items;
   }

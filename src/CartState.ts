@@ -7,7 +7,15 @@ export class CartState {
   @observable public totalPrice: number = 0;
 
   @action public addToCart(menuItem: MenuItem) {
+    this.totalPrice += menuItem.price;
     this.cartItems.push(menuItem);
   }
-  @action public removeFromCart(id: string) {}
+
+  @action public removeFromCart(idx: number) {
+    const removedItem = this.cartItems[idx];
+
+    this.totalPrice -= removedItem.price;
+
+    this.cartItems.splice(idx, 1);
+  }
 }

@@ -2,7 +2,7 @@
 
 .cart-item {
   height: 15%;
-  width: 90%;
+  width: 100%;
   padding: 5px 10px;
 
   border: 1px solid green;
@@ -11,4 +11,17 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  .name {
+    font-size: 15px;
+  }
+
+  .button {
+    padding: 3px 5px;
+    background-color: $dark-background;
+    border: 3px solid $light-background;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+  }
 }
