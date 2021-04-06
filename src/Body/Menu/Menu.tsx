@@ -18,7 +18,7 @@ export class Menu extends React.PureComponent<MenuProps> {
     let menuPage: JSX.Element;
     switch (this.props.appState.currentMenuPage) {
       case MenuPage.BURGERS:
-        menuPage = <BurgersPage />;
+        menuPage = <BurgersPage appState={this.props.appState} />;
         break;
       case MenuPage.SIDES:
         menuPage = <SidesPage appState={this.props.appState} />;
@@ -27,7 +27,7 @@ export class Menu extends React.PureComponent<MenuProps> {
         menuPage = <DrinksPage appState={this.props.appState} />;
         break;
       default:
-        menuPage = <BurgersPage />;
+        menuPage = <BurgersPage appState={this.props.appState} />;
         break;
     }
 
