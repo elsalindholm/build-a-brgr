@@ -21,7 +21,7 @@ export class BurgerIngredientComp extends React.PureComponent<BurgerIngredientPr
         <div className={'bi-price'}>£ {this.props.menuItem.price}</div>
         <button
           className={'button'}
-          onClick={() => this.props.appState.cartState.addToCart(this.props.menuItem)}
+          onClick={() => this.props.appState.cartState.addToBurger(this.props.menuItem)}
         >
           {this.props.menuItem.buttonTxt}
         </button>

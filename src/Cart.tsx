@@ -4,7 +4,6 @@ import { CartState } from './CartState';
 
 import './cart.scss';
 
-import { fries } from './MenuItems';
 import { CartItem } from './CartItem';
 import { observer } from 'mobx-react';
 
