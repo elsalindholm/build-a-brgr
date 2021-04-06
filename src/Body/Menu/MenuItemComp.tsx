@@ -26,7 +26,7 @@ export class MenuItemComp extends React.PureComponent<MicProps> {
           className={'button'}
           onClick={() => this.props.appState.cartState.addToCart(this.props.menuItem)}
         >
-          Add to cart
+          {this.props.menuItem.buttonTxt}
         </button>
       </div>
     );
