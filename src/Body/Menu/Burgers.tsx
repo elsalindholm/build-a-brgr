@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppState } from '../../AppState';
+import { CartState } from '../../CartState';
 import {
   applewood,
   avocado,
@@ -42,6 +43,8 @@ interface BurgerProps {
 }
 
 export class BurgersPage extends React.PureComponent<BurgerProps> {
+  private burgerState = new CartState();
+
   public render() {
     return (
       <div className={'burgers-page'}>
@@ -57,56 +60,56 @@ export class BurgersPage extends React.PureComponent<BurgerProps> {
             <div className={'ingredients'}>
               Buns
               <div className={'options'}>
-                <BurgerIngredientComp menuItem={brioche} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={sesame} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={veganBun} appState={this.props.appState} />
+                <BurgerIngredientComp menuItem={brioche} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={sesame} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={veganBun} burgerState={this.burgerState} />
               </div>
             </div>
             <div className={'ingredients'}>
               Patties
               <div className={'options'}>
-                <BurgerIngredientComp menuItem={beefPatty} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={chickenPatty} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={pulledPork} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={beanBurger} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={mushroomPatty} appState={this.props.appState} />
+                <BurgerIngredientComp menuItem={beefPatty} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={chickenPatty} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={pulledPork} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={beanBurger} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={mushroomPatty} burgerState={this.burgerState} />
               </div>
             </div>
             <div className={'ingredients'}>
               Cheese
               <div className={'options'}>
-                <BurgerIngredientComp menuItem={cheddar} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={applewood} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={blueCheese} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={veganCheese} appState={this.props.appState} />
+                <BurgerIngredientComp menuItem={cheddar} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={applewood} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={blueCheese} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={veganCheese} burgerState={this.burgerState} />
               </div>
             </div>
             <div className={'ingredients'}>
               Sauces
               <div className={'options'}>
-                <BurgerIngredientComp menuItem={spicyMayo} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={pestoMayo} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={ranch} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={ketchup} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={mustard} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={sweetChilli} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={bbq} appState={this.props.appState} />
+                <BurgerIngredientComp menuItem={spicyMayo} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={pestoMayo} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={ranch} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={ketchup} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={mustard} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={sweetChilli} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={bbq} burgerState={this.burgerState} />
               </div>
             </div>
             <div className={'ingredients'}>
               Toppings
               <div className={'options'}>
-                <BurgerIngredientComp menuItem={gherkins} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={onionRings} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={tomato} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={crispyOnion} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={bacon} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={blackPudding} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={avocado} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={mushrooms} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={redOnion} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={hashBrown} appState={this.props.appState} />
-                <BurgerIngredientComp menuItem={roastedPeppers} appState={this.props.appState} />
+                <BurgerIngredientComp menuItem={gherkins} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={onionRings} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={tomato} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={crispyOnion} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={bacon} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={blackPudding} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={avocado} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={mushrooms} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={redOnion} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={hashBrown} burgerState={this.burgerState} />
+                <BurgerIngredientComp menuItem={roastedPeppers} burgerState={this.burgerState} />
               </div>
             </div>
           </div>

@@ -1,29 +1,29 @@
 import React from 'react';
 import { AppState } from '../../AppState';
+import { CartState } from '../../CartState';
 import { MenuItem } from '../../MenuItems';
 
 import './burger-ingredient-comp.scss';
 
 export interface BurgerIngredientProps {
   menuItem: MenuItem;
-  appState: AppState;
+  burgerState: CartState;
 }
 
 export class BurgerIngredientComp extends React.PureComponent<BurgerIngredientProps> {
   render() {
+    const { menuItem, burgerState } = this.props;
+
     return (
       <div className={'burger-item'}>
-        <div className={'name'}>{this.props.menuItem.name}</div>
+        <div className={'name'}>{menuItem.name}</div>
         <div className={'dietary-info'}>
-          {this.props.menuItem.vegetarian && <div className={'vegetarian'}>V</div>}
-          {this.props.menuItem.vegan && <div className={'vegan'}>VG</div>}
+          {menuItem.vegetarian && <div className={'vegetarian'}>V</div>}
+          {menuItem.vegan && <div className={'vegan'}>VG</div>}
         </div>
-        <div className={'bi-price'}>£ {this.props.menuItem.price}</div>
-        <button
-          className={'button'}
-          onClick={() => this.props.appState.cartState.addToBurger(this.props.menuItem)}
-        >
-          {this.props.menuItem.buttonTxt}
+        <div className={'bi-price'}>£ {menuItem.price}</div>
+        <button className={'button'} onClick={() => burgerState.addToCart(menuItem)}>
+          {menuItem.buttonTxt}
         </button>
       </div>
     );
