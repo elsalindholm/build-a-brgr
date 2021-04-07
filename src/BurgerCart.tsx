@@ -4,9 +4,11 @@ import React from 'react';
 import './burger-cart.scss';
 import { CartItem } from './CartItem';
 import { CartState } from './CartState';
+import { BurgerItem, MenuItem } from './MenuItems';
 
 interface BCProps {
   burgerState: CartState;
+  addToCart: (menuItem: MenuItem) => void;
 }
 
 @observer
@@ -23,7 +25,7 @@ export class BurgerCart extends React.PureComponent<BCProps> {
         <div className={'bg-items'}>{this.renderBurgerCartItems()}</div>
         <div className={'bg-footer'}>
           <div>Total £ {burgerState.totalPrice} </div>
-          <button>Add to Cart</button>
+          <button onClick={() => this.addBurgerToCart()}>Add to Cart</button>
         </div>
       </div>
     );
@@ -36,5 +38,32 @@ export class BurgerCart extends React.PureComponent<BCProps> {
       items.push(<CartItem cartItem={item} position={idx} cartState={this.props.burgerState} />);
     });
     return items;
+  }
+
+  private addBurgerToCart() {
+    const { burgerState, addToCart } = this.props;
+
+    let isVegetarian = true;
+    let isVegan = true;
+    burgerState.cartItems.forEach((item) => {
+      if (!item.vegetarian) {
+        isVegetarian = false;
+      }
+
+      if (!item.vegan) {
+        isVegan = false;
+      }
+    });
+
+    const newBurger: BurgerItem = {
+      name: 'Burger',
+      price: burgerState.totalPrice,
+      vegetarian: isVegetarian,
+      vegan: isVegan,
+      contents: burgerState.cartItems,
+    };
+
+    addToCart(newBurger);
+    burgerState.clearCart();
   }
 }

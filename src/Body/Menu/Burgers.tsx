@@ -18,6 +18,7 @@ import {
   gherkins,
   hashBrown,
   ketchup,
+  MenuItem,
   mushroomPatty,
   mushrooms,
   mustard,
@@ -47,6 +48,8 @@ export class BurgersPage extends React.PureComponent<BurgerProps> {
   private burgerState = new CartState();
 
   public render() {
+    const { appState } = this.props;
+
     return (
       <div className={'burgers-page'}>
         <div className={'title'}>Burgers</div>
@@ -114,7 +117,10 @@ export class BurgersPage extends React.PureComponent<BurgerProps> {
               </div>
             </div>
           </div>
-          <BurgerCart burgerState={this.burgerState} />
+          <BurgerCart
+            burgerState={this.burgerState}
+            addToCart={(menuItem: MenuItem) => appState.cartState.addToCart(menuItem)}
+          />
         </div>
       </div>
     );

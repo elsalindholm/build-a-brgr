@@ -1,5 +1,5 @@
 export interface MenuItem {
-  id: string;
+  id?: string;
   name: string;
   price: number;
   vegetarian?: boolean;
@@ -7,6 +7,9 @@ export interface MenuItem {
   buttonTxt?: string;
 }
 
+export interface BurgerItem extends MenuItem {
+  contents: MenuItem[];
+}
 //////////////sides
 
 export const fries: MenuItem = {
