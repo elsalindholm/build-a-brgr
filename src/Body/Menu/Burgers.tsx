@@ -113,17 +113,6 @@ export class BurgersPage extends React.PureComponent<BurgerProps> {
               </div>
             </div>
           </div>
-          <div className={'burger-cart'}>
-            <div className={'bg-header'}>
-              <div>BRGR BUILDER</div>
-              <button>Clear</button>
-            </div>
-            <div className={'bg-items'}>Items</div>
-            <div className={'bg-footer'}>
-              <div>Total £</div>
-              <button>Add to Cart</button>
-            </div>
-          </div>
         </div>
       </div>
     );
