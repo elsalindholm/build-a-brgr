@@ -14,7 +14,11 @@
   flex-shrink: 0;
 
   .name {
+    width: 75%;
     font-size: 15px;
+
+    text-align: left;
+    padding: 0px 10px;
   }
 
   .ci-price {

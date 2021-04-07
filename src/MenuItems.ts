@@ -1,3 +1,10 @@
+import { EnumDeclaration } from 'typescript';
+
+export enum ItemType {
+  GENERAL = 'general',
+  BURGER = 'burger',
+}
+
 export interface MenuItem {
   id?: string;
   name: string;
@@ -5,6 +12,7 @@ export interface MenuItem {
   vegetarian?: boolean;
   vegan?: boolean;
   buttonTxt?: string;
+  type: ItemType;
 }
 
 export interface BurgerItem extends MenuItem {
@@ -19,6 +27,7 @@ export const fries: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Cart',
+  type: ItemType.GENERAL,
 };
 
 export const sweetPotatoFries: MenuItem = {
@@ -28,6 +37,7 @@ export const sweetPotatoFries: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Cart',
+  type: ItemType.GENERAL,
 };
 
 export const houseSlaw: MenuItem = {
@@ -37,6 +47,7 @@ export const houseSlaw: MenuItem = {
   vegetarian: true,
   vegan: false,
   buttonTxt: 'Add to Cart',
+  type: ItemType.GENERAL,
 };
 
 export const kimchiFries: MenuItem = {
@@ -46,6 +57,7 @@ export const kimchiFries: MenuItem = {
   vegetarian: true,
   vegan: false,
   buttonTxt: 'Add to Cart',
+  type: ItemType.GENERAL,
 };
 
 /////////////// drinks
@@ -57,6 +69,7 @@ export const pepsiDrink: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Cart',
+  type: ItemType.GENERAL,
 };
 
 export const lemonade: MenuItem = {
@@ -66,6 +79,7 @@ export const lemonade: MenuItem = {
   vegetarian: true,
   vegan: false,
   buttonTxt: 'Add to Cart',
+  type: ItemType.GENERAL,
 };
 
 export const fizzyElderflower: MenuItem = {
@@ -75,6 +89,7 @@ export const fizzyElderflower: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Cart',
+  type: ItemType.GENERAL,
 };
 
 export const irnBru: MenuItem = {
@@ -84,6 +99,7 @@ export const irnBru: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Cart',
+  type: ItemType.GENERAL,
 };
 
 ///// burger toppings
@@ -97,6 +113,7 @@ export const brioche: MenuItem = {
   vegetarian: true,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const sesame: MenuItem = {
@@ -106,6 +123,7 @@ export const sesame: MenuItem = {
   vegetarian: true,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const veganBun: MenuItem = {
@@ -115,6 +133,7 @@ export const veganBun: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 /// patties
@@ -125,6 +144,7 @@ export const beefPatty: MenuItem = {
   vegetarian: false,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 export const chickenPatty: MenuItem = {
   id: '13',
@@ -133,6 +153,7 @@ export const chickenPatty: MenuItem = {
   vegetarian: false,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const pulledPork: MenuItem = {
@@ -142,6 +163,7 @@ export const pulledPork: MenuItem = {
   vegetarian: false,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const beanBurger: MenuItem = {
@@ -151,6 +173,7 @@ export const beanBurger: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const mushroomPatty: MenuItem = {
@@ -160,6 +183,7 @@ export const mushroomPatty: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 ///cheese
@@ -170,6 +194,7 @@ export const cheddar: MenuItem = {
   vegetarian: true,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const applewood: MenuItem = {
@@ -179,6 +204,7 @@ export const applewood: MenuItem = {
   vegetarian: true,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const blueCheese: MenuItem = {
@@ -188,6 +214,7 @@ export const blueCheese: MenuItem = {
   vegetarian: true,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const veganCheese: MenuItem = {
@@ -197,6 +224,7 @@ export const veganCheese: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 ///sauces
@@ -207,6 +235,7 @@ export const spicyMayo: MenuItem = {
   vegetarian: true,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const pestoMayo: MenuItem = {
@@ -216,6 +245,7 @@ export const pestoMayo: MenuItem = {
   vegetarian: true,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const ranch: MenuItem = {
@@ -225,6 +255,7 @@ export const ranch: MenuItem = {
   vegetarian: true,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const ketchup: MenuItem = {
@@ -234,6 +265,7 @@ export const ketchup: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const mustard: MenuItem = {
@@ -243,6 +275,7 @@ export const mustard: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const sweetChilli: MenuItem = {
@@ -252,6 +285,7 @@ export const sweetChilli: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const bbq: MenuItem = {
@@ -261,6 +295,7 @@ export const bbq: MenuItem = {
   vegetarian: true,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 ///toppings
 
@@ -271,6 +306,7 @@ export const gherkins: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const onionRings: MenuItem = {
@@ -280,6 +316,7 @@ export const onionRings: MenuItem = {
   vegetarian: true,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const tomato: MenuItem = {
@@ -289,6 +326,7 @@ export const tomato: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const crispyOnion: MenuItem = {
@@ -298,6 +336,7 @@ export const crispyOnion: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const bacon: MenuItem = {
@@ -307,6 +346,7 @@ export const bacon: MenuItem = {
   vegetarian: false,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const blackPudding: MenuItem = {
@@ -316,6 +356,7 @@ export const blackPudding: MenuItem = {
   vegetarian: false,
   vegan: false,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const avocado: MenuItem = {
@@ -325,6 +366,7 @@ export const avocado: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const mushrooms: MenuItem = {
@@ -334,6 +376,7 @@ export const mushrooms: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 export const redOnion: MenuItem = {
   id: '36',
@@ -342,6 +385,7 @@ export const redOnion: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const hashBrown: MenuItem = {
@@ -351,6 +395,7 @@ export const hashBrown: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };
 
 export const roastedPeppers: MenuItem = {
@@ -360,4 +405,5 @@ export const roastedPeppers: MenuItem = {
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
+  type: ItemType.GENERAL,
 };

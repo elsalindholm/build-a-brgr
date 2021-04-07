@@ -4,7 +4,7 @@ import React from 'react';
 import './burger-cart.scss';
 import { CartItem } from './CartItem';
 import { CartState } from './CartState';
-import { BurgerItem, MenuItem } from './MenuItems';
+import { BurgerItem, MenuItem, ItemType } from './MenuItems';
 
 interface BCProps {
   burgerState: CartState;
@@ -61,6 +61,7 @@ export class BurgerCart extends React.PureComponent<BCProps> {
       vegetarian: isVegetarian,
       vegan: isVegan,
       contents: burgerState.cartItems,
+      type: ItemType.BURGER,
     };
 
     addToCart(newBurger);

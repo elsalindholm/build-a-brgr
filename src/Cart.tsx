@@ -6,6 +6,7 @@ import './cart.scss';
 
 import { CartItem } from './CartItem';
 import { observer } from 'mobx-react';
+import { BurgerItem, ItemType } from './MenuItems';
 
 interface CartProps {
   open: boolean;
@@ -45,6 +46,12 @@ export class Cart extends React.PureComponent<CartProps> {
 
     this.props.cartState.cartItems.forEach((item, idx) => {
       items.push(<CartItem cartItem={item} position={idx} cartState={this.props.cartState} />);
+      if (item.type === ItemType.BURGER) {
+        const burger = item as BurgerItem;
+        burger.contents.forEach((ing) => {
+          items.push(<div className={'burger-ing'}>{ing.name}</div>);
+        });
+      }
     });
     return items;
   }

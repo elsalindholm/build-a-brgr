@@ -58,7 +58,7 @@ export class BurgersPage extends React.PureComponent<BurgerProps> {
         </div>
         <div className={'blurb'}>All of our burgers come with lettuce.</div>
         <div className={'blurb'}>Ready, set ...... BUILD!</div>
-        <div className={'price'}>Price £11.50</div>
+
         <div className={'burger-builder'}>
           <div className={'ingredients-display'}>
             <div className={'ingredients'}>
