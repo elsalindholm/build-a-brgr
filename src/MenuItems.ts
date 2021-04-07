@@ -2,9 +2,9 @@ export interface MenuItem {
   id: string;
   name: string;
   price: number;
-  vegetarian: boolean;
-  vegan: boolean;
-  buttonTxt: string;
+  vegetarian?: boolean;
+  vegan?: boolean;
+  buttonTxt?: string;
 }
 
 //////////////sides
@@ -226,8 +226,8 @@ export const ranch: MenuItem = {
 
 export const ketchup: MenuItem = {
   id: '24',
-  name: 'Vegan Cheese',
-  price: 1,
+  name: 'Ketchup',
+  price: 0,
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
@@ -236,7 +236,7 @@ export const ketchup: MenuItem = {
 export const mustard: MenuItem = {
   id: '25',
   name: 'Mustard',
-  price: 1,
+  price: 0,
   vegetarian: true,
   vegan: true,
   buttonTxt: 'Add to Burger',
@@ -272,10 +272,10 @@ export const gherkins: MenuItem = {
 
 export const onionRings: MenuItem = {
   id: '29',
-  name: 'onionRings',
+  name: 'Onion Rings',
   price: 2,
   vegetarian: true,
-  vegan: true,
+  vegan: false,
   buttonTxt: 'Add to Burger',
 };
 

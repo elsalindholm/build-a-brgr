@@ -18,4 +18,9 @@ export class CartState {
 
     this.cartItems.splice(idx, 1);
   }
+
+  @action public clearCart() {
+    this.cartItems = [];
+    this.totalPrice = 0;
+  }
 }

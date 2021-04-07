@@ -16,7 +16,7 @@ export class CartItem extends React.PureComponent<CartItemProps> {
     return (
       <div className={'cart-item'}>
         <div className={'name'}>{this.props.cartItem.name}</div>
-        <div className={'price'}>£ {this.props.cartItem.price}</div>
+        <div className={'ci-price'}>£ {this.props.cartItem.price}</div>
         <button
           className={'button'}
           onClick={() => this.props.cartState.removeFromCart(this.props.position)}

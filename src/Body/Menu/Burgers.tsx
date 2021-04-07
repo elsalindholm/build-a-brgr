@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppState } from '../../AppState';
+import { BurgerCart } from '../../BurgerCart';
 import { CartState } from '../../CartState';
 import {
   applewood,
@@ -113,6 +114,7 @@ export class BurgersPage extends React.PureComponent<BurgerProps> {
               </div>
             </div>
           </div>
+          <BurgerCart burgerState={this.burgerState} />
         </div>
       </div>
     );
