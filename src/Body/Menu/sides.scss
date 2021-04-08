@@ -1,8 +1,9 @@
 @import '../../app-styles.scss';
 
 .sides-page {
-  //border: 1px solid white;
   width: 100%;
+  padding: 30px 0px;
+  ///border: 1px solid white;
 
   text-align: center;
   font-family: $monserrat;
@@ -28,4 +29,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-content: center;
+  padding: 20px;
+
+  //border: 1px solid pink;
 }

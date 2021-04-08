@@ -92,7 +92,13 @@
   font-weight: $weight-medium;
   font-size: 15px;
 
-  //border: 1px solid white;
+  .ul {
+    list-style-type: circle;
+    color: $light-text;
+    .li {
+      list-style-type: circle;
+    }
+  }
 }
 
 .get-in-touch-container {

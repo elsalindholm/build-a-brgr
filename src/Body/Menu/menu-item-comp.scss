@@ -3,8 +3,10 @@
 .menu-item {
   height: 40vh;
   width: 15vw;
+  padding: 10px 0px;
 
-  border: 1px solid white;
+  box-shadow: 10px 10px 20px -8px black;
+  background-color: $dark-background;
   border-radius: 10px;
 
   display: flex;
@@ -15,11 +17,17 @@
   color: $light-text;
   font-family: $monserrat;
 
-  .img {
-    height: 18vh;
-    width: 10vw;
+  .img-container {
+    height: 120px;
+    width: 120px;
+    overflow: hidden;
 
-    border: 1px solid yellow;
+    //border: 1px solid yellow;
+
+    img {
+      max-height: 120px;
+      max-width: 120px;
+    }
   }
   .name {
     font-size: 20px;
@@ -63,7 +71,7 @@
   .button {
     padding: 5px 10px;
 
-    background-color: $dark-background;
+    background-color: $light-background;
     color: $light-text;
     border: 3px solid $light-text;
     border-radius: 10px;

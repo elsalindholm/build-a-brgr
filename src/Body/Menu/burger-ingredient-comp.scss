@@ -6,6 +6,7 @@
   margin: 10px;
   //border: 1px solid $dark-background;
   background-color: $dark-background;
+  box-shadow: 10px 10px 20px -8px black;
   border-radius: 20px;
 
   display: flex;
@@ -32,7 +33,7 @@
     .vegetarian {
       width: 30px;
       height: 30px;
-      padding: 3%;
+      padding: 6px 2px;
 
       border: 3px solid $light-text;
       border-radius: 100%;
@@ -41,7 +42,7 @@
     .vegan {
       width: 30px;
       height: 30px;
-      padding: 3%;
+      padding: 6px 1px;
 
       border: 3px solid $light-text;
       border-radius: 100%;

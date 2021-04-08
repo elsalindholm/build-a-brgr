@@ -13,20 +13,21 @@ export interface MicProps {
 
 export class MenuItemComp extends React.PureComponent<MicProps> {
   render() {
+    const { menuItem, appState } = this.props;
+
     return (
       <div className={'menu-item'}>
-        <div className={'img'}>Image</div>
-        <div className={'name'}>{this.props.menuItem.name}</div>
-        <div className={'dietary-info'}>
-          {this.props.menuItem.vegetarian && <div className={'vegetarian'}>V</div>}
-          {this.props.menuItem.vegan && <div className={'vegan'}>VG</div>}
+        <div className={'img-container'}>
+          <img src={menuItem.image} alt={menuItem.name}></img>
         </div>
-        <div className={'price'}>£ {this.props.menuItem.price}</div>
-        <button
-          className={'button'}
-          onClick={() => this.props.appState.cartState.addToCart(this.props.menuItem)}
-        >
-          {this.props.menuItem.buttonTxt}
+        <div className={'name'}>{menuItem.name}</div>
+        <div className={'dietary-info'}>
+          {menuItem.vegetarian && <div className={'vegetarian'}>V</div>}
+          {menuItem.vegan && <div className={'vegan'}>VG</div>}
+        </div>
+        <div className={'price'}>£ {menuItem.price}</div>
+        <button className={'button'} onClick={() => appState.cartState.addToCart(menuItem)}>
+          {menuItem.buttonTxt}
         </button>
       </div>
     );

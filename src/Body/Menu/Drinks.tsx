@@ -3,7 +3,7 @@ import React from 'react';
 import './drinks.scss';
 import { MenuItemComp } from './MenuItemComp';
 
-import { fizzyElderflower, irnBru, lemonade, pepsiDrink } from '../../MenuItems';
+import { beer, fizzyElderflower, lemonade, pepsiDrink } from '../../MenuItems';
 import { AppState } from '../../AppState';
 
 interface DrinksProps {
@@ -20,7 +20,7 @@ export class DrinksPage extends React.PureComponent<DrinksProps> {
           <MenuItemComp menuItem={pepsiDrink} appState={this.props.appState} />
           <MenuItemComp menuItem={lemonade} appState={this.props.appState} />
           <MenuItemComp menuItem={fizzyElderflower} appState={this.props.appState} />
-          <MenuItemComp menuItem={irnBru} appState={this.props.appState} />
+          <MenuItemComp menuItem={beer} appState={this.props.appState} />
         </div>
       </div>
     );

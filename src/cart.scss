@@ -48,9 +48,12 @@
     .close-cart-button {
       padding: 5px;
       border-radius: 10px;
-      border: 3px solid white;
+      border: 3px solid $dark-background;
 
-      background-color: $dark-background;
+      font-family: $monserrat;
+      font-weight: $weight-semi-bold;
+
+      background-color: $light-background;
       color: $light-text;
     }
   }
@@ -85,17 +88,21 @@
     .order-button {
       padding: 5px;
       border-radius: 10px;
-      border: 3px solid white;
+      border: 3px solid $dark-background;
 
-      background-color: $dark-background;
+      background-color: $light-background;
       color: $light-text;
+      font-family: $monserrat;
+      font-weight: $weight-semi-bold;
     }
   }
 }
 
 .burger-ing {
+  width: 80%;
+
   font-size: 12px;
   font-weight: $weight-regular;
-
-  border: 1px solid red;
+  text-align: left;
+  flex-shrink: 0;
 }
