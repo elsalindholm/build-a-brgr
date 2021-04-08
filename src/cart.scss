@@ -4,12 +4,15 @@
   width: 400px;
   height: 600px;
   position: absolute;
+  z-index: 3;
   background-color: white;
   border: 3px solid $dark-background;
   border-radius: 15px;
   top: 0;
   right: 0;
-  transition: all 0.5s ease-in-out;
+  transform-origin: 87% 6%;
+  //transition-property: z-index;
+  transition: all 0.2s linear;
 
   font-family: $monserrat;
   font-weight: $weight-bold;
@@ -20,11 +23,11 @@
   align-items: center;
 
   &.open {
-    transform: translateX(0);
+    animation: cartOpen 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 both;
   }
 
   &.closed {
-    transform: translateX(1000px);
+    animation: cartClose 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 both;
   }
 
   .header {
@@ -105,4 +108,26 @@
   font-weight: $weight-regular;
   text-align: left;
   flex-shrink: 0;
+}
+
+@keyframes cartOpen {
+  0% {
+    border-radius: 50%;
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 15px;
+  }
+}
+
+@keyframes cartClose {
+  0% {
+    transform: scale(1);
+    border-radius: 15px;
+  }
+  100% {
+    border-radius: 50%;
+    transform: scale(0);
+  }
 }
