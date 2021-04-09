@@ -7,17 +7,19 @@ import './cart.scss';
 import { CartItem } from './CartItem';
 import { observer } from 'mobx-react';
 import { BurgerItem, ItemType } from './MenuItems';
+import { AppState, Page } from './AppState';
 
 interface CartProps {
   open: boolean;
   onClose: () => void;
   cartState: CartState;
+  appState: AppState;
 }
 
 @observer
 export class Cart extends React.PureComponent<CartProps> {
   public render() {
-    const { open, onClose } = this.props;
+    const { open, onClose, appState } = this.props;
     const openClass = open ? 'open' : 'closed';
 
     return (
@@ -34,7 +36,9 @@ export class Cart extends React.PureComponent<CartProps> {
         <div className={'footer'}>
           <div>TOTAL £ {this.props.cartState.totalPrice}</div>
           <div>
-            <button className={'order-button'}>ORDER</button>
+            <button className={'order-button'} onClick={() => appState.setCurrentPage(Page.ORDER)}>
+              ORDER
+            </button>
           </div>
         </div>
       </div>

@@ -1,0 +1,78 @@
+@import '../app-styles.scss';
+
+.op-breadcrumbs {
+  font-family: $roboto;
+  font-size: 15px;
+  font-weight: $weight-regular;
+  border-bottom: 3px solid $light-background;
+  margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  button {
+    padding: 0px 10px;
+    background-color: white;
+    border: none;
+  }
+}
+
+.cart-summary-container {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: $monserrat;
+
+  .cart-summary {
+    width: 45%;
+    height: auto;
+    padding: 30px;
+
+    border: 1px solid $light-background;
+    border-radius: 10px;
+  }
+  .cart-summary-payment {
+    width: 45%;
+    height: auto;
+
+    //border: 1px solid red;
+
+    .cs-price {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+
+      font-size: 25px;
+    }
+
+    button {
+      width: auto;
+      height: auto;
+      font-size: 20px;
+      padding: 5px;
+      margin: 20px;
+
+      color: white;
+      background-color: $light-background;
+      border: 3px solid $dark-background;
+      border-radius: 10px;
+    }
+  }
+}
+
+.op-burger-ing {
+  width: 80%;
+  padding-left: 35px;
+
+  font-size: 12px;
+  font-weight: $weight-regular;
+  text-align: left;
+  flex-shrink: 0;
+}

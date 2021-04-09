@@ -1,0 +1,39 @@
+@import '../app-styles.scss';
+
+.op-header {
+  width: 90%;
+  height: 18%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  font-family: $monserrat;
+
+  .oph-logo {
+    font-size: 30px;
+    font-weight: $weight-bold;
+  }
+
+  .oph-title-container {
+    font-size: 25px;
+    font-weight: $weight-regular;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .oph-title {
+      padding: 0px 10px;
+    }
+    .oph-cart {
+      height: 35px;
+      width: 35px;
+      background-image: url('/Assets/shoppingCart.png');
+      background-size: cover;
+      border-radius: 50%;
+    }
+  }
+}

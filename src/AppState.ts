@@ -6,6 +6,7 @@ export enum Page {
   HOME = 'home',
   ABOUT = 'about',
   MENU = 'menu',
+  ORDER = 'order',
 }
 
 export enum MenuPage {
@@ -23,7 +24,7 @@ export class AppState {
     this.cartOpen = open;
   }
 
-  @observable public currentPage = Page.MENU;
+  @observable public currentPage = Page.HOME;
   @observable public currentMenuPage = MenuPage.BURGERS;
 
   @action public setCurrentPage(page: Page) {

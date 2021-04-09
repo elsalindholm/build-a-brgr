@@ -10,12 +10,18 @@ import { Header } from './Header';
 
 import './app.scss';
 import { Cart } from './Cart';
+import { OrderPage } from './OrderPages/OrderPage';
 
 @observer
 export class App extends React.PureComponent {
   private readonly appState = new AppState();
 
   public render() {
+    // if we're on order page, just show order page
+    if (this.appState.currentPage === Page.ORDER) {
+      return <OrderPage appState={this.appState} />;
+    }
+
     let page: JSX.Element;
     switch (this.appState.currentPage) {
       case Page.HOME:
@@ -38,6 +44,7 @@ export class App extends React.PureComponent {
           open={this.appState.cartOpen}
           onClose={() => this.appState.setCartOpen(false)}
           cartState={this.appState.cartState}
+          appState={this.appState}
         />
         <Header appState={this.appState} />
         <div className={'body'}>
