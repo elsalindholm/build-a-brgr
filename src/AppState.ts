@@ -15,6 +15,13 @@ export enum MenuPage {
   DRINKS = 'drinks',
 }
 
+export enum OrderPage {
+  CARTSUMMARY = 'cartSummary',
+  DELIVERYDETAILS = 'deliveryDetails',
+  PAYMENT = 'payment',
+  ORDERPLACED = 'orderPaced',
+}
+
 export class AppState {
   public readonly cartState = new CartState();
 
@@ -24,8 +31,9 @@ export class AppState {
     this.cartOpen = open;
   }
 
-  @observable public currentPage = Page.HOME;
+  @observable public currentPage = Page.ORDER;
   @observable public currentMenuPage = MenuPage.BURGERS;
+  @observable public currentOrderPage = OrderPage.ORDERPLACED;
 
   @action public setCurrentPage(page: Page) {
     this.currentPage = page;
@@ -33,5 +41,9 @@ export class AppState {
 
   @action public setCurrentMenuPage(menuPage: MenuPage) {
     this.currentMenuPage = menuPage;
+  }
+
+  @action public setCurrentOrderPage(orderPage: OrderPage) {
+    this.currentOrderPage = orderPage;
   }
 }

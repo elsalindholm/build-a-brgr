@@ -22,13 +22,14 @@
 .cart-summary-container {
   width: 100%;
   height: auto;
-  padding: 10px;
+  padding-bottom: 30px;
 
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   font-family: $monserrat;
+  color: $dark-text;
 
   .cart-summary {
     width: 45%;

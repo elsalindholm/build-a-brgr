@@ -10,7 +10,7 @@ import { Header } from './Header';
 
 import './app.scss';
 import { Cart } from './Cart';
-import { OrderPage } from './OrderPages/OrderPage';
+import { OrderPageComp } from './OrderPages/OrderPage';
 
 @observer
 export class App extends React.PureComponent {
@@ -19,7 +19,7 @@ export class App extends React.PureComponent {
   public render() {
     // if we're on order page, just show order page
     if (this.appState.currentPage === Page.ORDER) {
-      return <OrderPage appState={this.appState} />;
+      return <OrderPageComp appState={this.appState} />;
     }
 
     let page: JSX.Element;

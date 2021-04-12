@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react';
 import React from 'react';
-import { AppState, Page } from '../AppState';
+import { AppState, OrderPage, Page } from '../AppState';
 import { CartItem } from '../CartItem';
 import { BurgerItem, ItemType } from '../MenuItems';
 
@@ -27,7 +27,9 @@ export class CartSummary extends React.PureComponent<CSProps> {
           <div className={'cart-summary-payment'}>
             <div className={'cs-price'}>Total £ {appState.cartState.totalPrice}</div>
             <div>Including VAT (20%) £ {appState.cartState.vatAmount}</div>
-            <button>Proceed to Order</button>
+            <button onClick={() => appState.setCurrentOrderPage(OrderPage.DELIVERYDETAILS)}>
+              Proceed to Order
+            </button>
           </div>
         </div>
       </div>

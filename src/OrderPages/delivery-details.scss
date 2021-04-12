@@ -1,0 +1,61 @@
+@import '../app-styles.scss';
+
+.op-breadcrumbs {
+  font-family: $roboto;
+  font-size: 15px;
+  font-weight: $weight-regular;
+  border-bottom: 3px solid $light-background;
+  margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  button {
+    padding: 0px 10px;
+    background-color: white;
+    border: none;
+  }
+}
+
+.delivery-details {
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+
+  //border: 1px solid red;
+  font-family: $monserrat;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    label {
+      width: 50%;
+
+      //border: 1px solid orange;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    input {
+      width: 70%;
+    }
+
+    .proceed-to-payment {
+      width: 20%;
+
+      color: $light-text;
+      font-family: $monserrat;
+      font-size: 20px;
+      background-color: $light-background;
+      border: 3px solid $dark-background;
+      border-radius: 10px;
+    }
+  }
+}

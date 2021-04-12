@@ -1,0 +1,121 @@
+@import '../app-styles.scss';
+
+.order-placed {
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+
+  border: 1px solid red;
+
+  .op-breadcrumbs {
+    font-family: $roboto;
+    font-size: 15px;
+    font-weight: $weight-regular;
+    border-bottom: 3px solid $light-background;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    button {
+      padding: 0px 10px;
+      background-color: white;
+      border: none;
+    }
+  }
+
+  .order-details {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: $monserrat;
+
+    .op-blurb {
+      font-size: 35px;
+      margin: 10px;
+    }
+
+    .op-eta {
+      font-size: 25px;
+      margin: 20px;
+      font-weight: $weight-bold;
+    }
+
+    .order-summary {
+      width: 100%;
+      height: auto;
+
+      border: 1px solid orange;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .os-title {
+        font-size: 25px;
+        margin: 20px;
+      }
+
+      .os-item-container {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+
+        border: 1px solid green;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .os-total {
+        margin: 20px;
+        font-size: 30px;
+        font-weight: $weight-bold;
+      }
+    }
+  }
+}
+
+.os-item {
+  width: 100%;
+  height: auto;
+
+  font-size: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .os-item-name {
+    width: 85%;
+    height: auto;
+    text-align: left;
+
+    border: 1px solid blue;
+  }
+
+  .os-item-price {
+    width: 15%;
+    height: auto;
+
+    text-align: center;
+    border: 1px solid pink;
+  }
+}
+
+.os-item-ing {
+  width: 100%;
+  height: auto;
+  padding-left: 35px;
+}
