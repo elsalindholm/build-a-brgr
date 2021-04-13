@@ -44,9 +44,6 @@
     align-items: center;
   }
 
-  .title {
-  }
-
   .close-cart {
     .close-cart-button {
       padding: 5px;
@@ -97,6 +94,11 @@
       color: $light-text;
       font-family: $monserrat;
       font-weight: $weight-semi-bold;
+
+      &:disabled {
+        background-color: lightgray;
+        border: darkgray;
+      }
     }
   }
 }

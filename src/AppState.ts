@@ -31,9 +31,9 @@ export class AppState {
     this.cartOpen = open;
   }
 
-  @observable public currentPage = Page.ORDER;
+  @observable public currentPage = Page.HOME;
   @observable public currentMenuPage = MenuPage.BURGERS;
-  @observable public currentOrderPage = OrderPage.ORDERPLACED;
+  @observable public currentOrderPage = OrderPage.CARTSUMMARY;
 
   @action public setCurrentPage(page: Page) {
     this.currentPage = page;
@@ -45,5 +45,10 @@ export class AppState {
 
   @action public setCurrentOrderPage(orderPage: OrderPage) {
     this.currentOrderPage = orderPage;
+  }
+
+  @action public exitOrderFlow() {
+    this.currentPage = Page.HOME;
+    this.currentOrderPage = OrderPage.CARTSUMMARY;
   }
 }

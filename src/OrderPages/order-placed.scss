@@ -51,13 +51,14 @@
       height: auto;
 
       display: flex;
-      flex-direction: row;
+      flex-direction: column-reverse;
       justify-content: space-evenly;
       align-items: center;
 
       .os-container {
         width: 45%;
         height: auto;
+        margin: 20px 0px;
 
         display: flex;
         flex-direction: column;
@@ -66,6 +67,7 @@
         .os-title {
           font-size: 25px;
           margin: 20px;
+          font-weight: $weight-bold;
         }
 
         .os-item-container {
@@ -88,14 +90,17 @@
       .dd-container {
         width: 45%;
         height: auto;
+        margin: 20px 0px;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         font-size: 25px;
 
         .dd-title {
           margin: 10px 0px;
+          font-weight: $weight-bold;
         }
 
         .dd-info {

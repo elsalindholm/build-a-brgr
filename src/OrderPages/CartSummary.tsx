@@ -27,7 +27,11 @@ export class CartSummary extends React.PureComponent<CSProps> {
           <div className={'cart-summary-payment'}>
             <div className={'cs-price'}>Total £ {appState.cartState.totalPrice}</div>
             <div className={'cs-VAT'}>Including VAT (20%) £ {appState.cartState.vatAmount}</div>
-            <button onClick={() => appState.setCurrentOrderPage(OrderPage.DELIVERYDETAILS)}>
+            <button
+              className={'order-pg-button'}
+              disabled={appState.cartState.orderButtonDisabled}
+              onClick={() => appState.setCurrentOrderPage(OrderPage.DELIVERYDETAILS)}
+            >
               Proceed to Order
             </button>
           </div>

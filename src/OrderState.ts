@@ -12,21 +12,27 @@ export class OrderState {
 
   @action public setCName(name: string) {
     this.cName = name;
+    this.validateInput();
   }
   @action public setCStAddress(address: string) {
     this.cStAddress = address;
+    this.validateInput();
   }
   @action public setCCity(city: string) {
     this.cCity = city;
+    this.validateInput();
   }
   @action public setCPostcode(postcode: string) {
     this.cPostcode = postcode;
+    this.validateInput();
   }
   @action public setCEmail(email: string) {
     this.cEmail = email;
+    this.validateInput();
   }
   @action public setCPhoneNum(phNum: string) {
     this.cPhoneNum = phNum;
+    this.validateInput();
   }
 
   @action public validateInput() {

@@ -19,16 +19,6 @@ export class OrderPlaced extends React.PureComponent<OrPlProps> {
         <div className={'op-breadcrumbs'}>
           <button onClick={() => appState.setCurrentPage(Page.HOME)}>Home</button>
           <p>{'>'}</p>
-          <button onClick={() => appState.setCurrentOrderPage(OrderPage.CARTSUMMARY)}>
-            Cart Summary
-          </button>
-          <p>{'>'}</p>
-          <button onClick={() => appState.setCurrentOrderPage(OrderPage.DELIVERYDETAILS)}>
-            Delivery Details
-          </button>
-          <p>{'>'}</p>
-          <button onClick={() => appState.setCurrentOrderPage(OrderPage.PAYMENT)}>Payment</button>
-          <p>{'>'}</p>
           <button>Order Placed</button>
         </div>
         <div className={'order-details'}>
@@ -51,7 +41,9 @@ export class OrderPlaced extends React.PureComponent<OrPlProps> {
               <div className={'dd-info'}>{orderState.cPhoneNum}</div>
             </div>
           </div>
-          <button onClick={() => appState.setCurrentPage(Page.HOME)}>Return Home</button>
+          <button className={'order-pg-button'} onClick={() => appState.setCurrentPage(Page.HOME)}>
+            Return to Build-A-BRGR
+          </button>
         </div>
       </div>
     );

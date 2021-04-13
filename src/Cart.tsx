@@ -19,7 +19,7 @@ interface CartProps {
 @observer
 export class Cart extends React.PureComponent<CartProps> {
   public render() {
-    const { open, onClose, appState } = this.props;
+    const { open, onClose, appState, cartState } = this.props;
     const openClass = open ? 'open' : 'closed';
 
     return (
@@ -36,7 +36,11 @@ export class Cart extends React.PureComponent<CartProps> {
         <div className={'footer'}>
           <div>TOTAL £ {this.props.cartState.totalPrice}</div>
           <div>
-            <button className={'order-button'} onClick={() => appState.setCurrentPage(Page.ORDER)}>
+            <button
+              className={'order-button'}
+              disabled={cartState.orderButtonDisabled}
+              onClick={() => appState.setCurrentPage(Page.ORDER)}
+            >
               ORDER
             </button>
           </div>

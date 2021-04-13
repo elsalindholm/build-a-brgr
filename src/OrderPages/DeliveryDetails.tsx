@@ -33,6 +33,7 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
               type='text'
               name='name'
               required
+              value={orderState.cName}
               onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 orderState.setCName(event.target.value)
               }
@@ -46,6 +47,7 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
               type='text'
               name='address'
               required
+              value={orderState.cStAddress}
               onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 orderState.setCStAddress(event.target.value)
               }
@@ -59,6 +61,7 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
               type='text'
               name='city'
               required
+              value={orderState.cCity}
               onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 orderState.setCCity(event.target.value)
               }
@@ -72,6 +75,7 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
               type='text'
               name='postcode'
               required
+              value={orderState.cPostcode}
               onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 orderState.setCPostcode(event.target.value)
               }
@@ -85,6 +89,7 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
               type='text'
               name='email'
               required
+              value={orderState.cEmail}
               onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 orderState.setCEmail(event.target.value)
               }
@@ -98,6 +103,7 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
               type='number'
               name='phonenumber'
               required
+              value={orderState.cPhoneNum}
               onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 orderState.setCPhoneNum(event.target.value)
               }
@@ -108,7 +114,8 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
           <br></br>
 
           <button
-            className={'proceed-to-payment'}
+            className={'order-pg-button'}
+            disabled={orderState.deliveryButtonDisabled}
             onClick={() => appState.setCurrentOrderPage(OrderPage.PAYMENT)}
           >
             {' '}

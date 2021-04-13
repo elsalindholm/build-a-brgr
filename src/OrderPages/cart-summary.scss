@@ -11,12 +11,6 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-
-  button {
-    padding: 0px 10px;
-    background-color: white;
-    border: none;
-  }
 }
 
 .cart-summary-container {
@@ -47,11 +41,12 @@
     display: flex;
     flex-direction: column;
     justify-items: flex-start;
+    align-items: flex-start;
 
     .cs-price {
       width: 100%;
       height: auto;
-      padding: 20px;
+      padding: 20px 0px;
 
       font-weight: $weight-bold;
 
@@ -61,22 +56,9 @@
     .cs-VAT {
       width: 100%;
       height: auto;
-      padding: 20px;
+      padding: 20px 0px;
 
       font-size: 20px;
-    }
-
-    button {
-      width: auto;
-      height: auto;
-      font-size: 20px;
-      padding: 5px;
-      margin: 20px;
-
-      color: white;
-      background-color: $light-background;
-      border: 3px solid $dark-background;
-      border-radius: 10px;
     }
   }
 }

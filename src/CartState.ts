@@ -7,10 +7,13 @@ export class CartState {
   @observable public totalPrice: number = 0;
   @observable public vatAmount: number = 0;
 
+  @observable public orderButtonDisabled: boolean = true;
+
   @action public addToCart(menuItem: MenuItem) {
     this.totalPrice += menuItem.price;
     this.setVat();
     this.cartItems.push(menuItem);
+    this.canOrder();
   }
 
   @action public removeFromCart(idx: number) {
@@ -20,6 +23,8 @@ export class CartState {
     this.setVat();
 
     this.cartItems.splice(idx, 1);
+
+    this.canOrder();
   }
 
   @action public clearCart() {
@@ -29,5 +34,13 @@ export class CartState {
 
   @action public setVat() {
     this.vatAmount = this.totalPrice * 0.2;
+  }
+
+  @action public canOrder() {
+    if (this.cartItems.length > 0) {
+      this.orderButtonDisabled = false;
+    } else {
+      this.orderButtonDisabled = true;
+    }
   }
 }

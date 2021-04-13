@@ -31,7 +31,10 @@ export class PaymentWindow extends React.PureComponent<PWProps> {
         <div className={'payment-window-blurb'}>
           <div>You cannot actually pay on this website.</div>
           <div>Please click Place the Order to proceed.</div>
-          <button onClick={() => appState.setCurrentOrderPage(OrderPage.ORDERPLACED)}>
+          <button
+            className={'order-pg-button'}
+            onClick={() => appState.setCurrentOrderPage(OrderPage.ORDERPLACED)}
+          >
             Place the Order
           </button>
         </div>
