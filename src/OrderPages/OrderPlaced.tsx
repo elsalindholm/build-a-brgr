@@ -1,16 +1,18 @@
 import React from 'react';
 import { AppState, OrderPage, Page } from '../AppState';
 import { ItemType, BurgerItem } from '../MenuItems';
+import { OrderState } from '../OrderState';
 
 import './order-placed.scss';
 
 export interface OrPlProps {
   appState: AppState;
+  orderState: OrderState;
 }
 
 export class OrderPlaced extends React.PureComponent<OrPlProps> {
   render() {
-    const { appState } = this.props;
+    const { appState, orderState } = this.props;
 
     return (
       <div className={'order-placed'}>
@@ -21,25 +23,35 @@ export class OrderPlaced extends React.PureComponent<OrPlProps> {
             Cart Summary
           </button>
           <p>{'>'}</p>
-          <button>Delivery Details</button>
+          <button onClick={() => appState.setCurrentOrderPage(OrderPage.DELIVERYDETAILS)}>
+            Delivery Details
+          </button>
           <p>{'>'}</p>
-          <button>Payment</button>
+          <button onClick={() => appState.setCurrentOrderPage(OrderPage.PAYMENT)}>Payment</button>
           <p>{'>'}</p>
           <button>Order Placed</button>
         </div>
         <div className={'order-details'}>
-          <div className={'op-blurb'}>Thank you!</div>
-          <div className={'op-blurb'}>Your order has been placed!</div>
-          <div className={'op-eta'}>ETA</div>
+          <div className={'op-blurb'}>Thank you,</div>
+          <div className={'op-blurb'}>your order has been placed!</div>
+          <div className={'op-eta'}>ETA {this.estimateETA()}</div>
           <div className={'order-summary'}>
-            <div>
+            <div className={'os-container'}>
               <div className={'os-title'}>Order summary:</div>
-
               <div className={'os-item-container'}>{this.renderOrderSummary()}</div>
               <div className={'os-total'}>Total £ {appState.cartState.totalPrice}</div>
             </div>
-            <div>Will be delivered to:</div>
+            <div className={'dd-container'}>
+              <div className={'dd-title'}>Will be delivered to:</div>
+              <div className={'dd-info'}>{orderState.cName}</div>
+              <div className={'dd-info'}>{orderState.cStAddress}</div>
+              <div className={'dd-info'}>{orderState.cCity}</div>
+              <div className={'dd-info'}>{orderState.cPostcode}</div>
+              <div className={'dd-info'}>{orderState.cEmail}</div>
+              <div className={'dd-info'}>{orderState.cPhoneNum}</div>
+            </div>
           </div>
+          <button onClick={() => appState.setCurrentPage(Page.HOME)}>Return Home</button>
         </div>
       </div>
     );
@@ -65,5 +77,11 @@ export class OrderPlaced extends React.PureComponent<OrPlProps> {
       }
     });
     return items;
+  }
+
+  private estimateETA() {
+    const hours = new Date().getHours() + 1;
+    const mins = new Date().getMinutes();
+    return `${hours}:${mins}`;
   }
 }

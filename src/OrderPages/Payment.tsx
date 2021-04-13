@@ -1,24 +1,30 @@
 import React from 'react';
-import { AppState, OrderPage } from '../AppState';
+import { AppState, OrderPage, Page } from '../AppState';
+import { OrderState } from '../OrderState';
 
 import './payment-window.scss';
 
 export interface PWProps {
   appState: AppState;
+  orderState: OrderState;
 }
 
 export class PaymentWindow extends React.PureComponent<PWProps> {
   render() {
-    const { appState } = this.props;
+    const { appState, orderState } = this.props;
 
     return (
       <div className={'payment-window'}>
         <div className={'op-breadcrumbs'}>
-          <button>Home</button>
+          <button onClick={() => appState.setCurrentPage(Page.HOME)}>Home</button>
           <p>{'>'}</p>
-          <button>Cart Summary</button>
+          <button onClick={() => appState.setCurrentOrderPage(OrderPage.CARTSUMMARY)}>
+            Cart Summary
+          </button>
           <p>{'>'}</p>
-          <button>Delivery Details</button>
+          <button onClick={() => appState.setCurrentOrderPage(OrderPage.DELIVERYDETAILS)}>
+            Delivery Details
+          </button>
           <p>{'>'}</p>
           <button>Payment</button>
         </div>

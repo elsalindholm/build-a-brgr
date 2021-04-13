@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   font-family: $monserrat;
   color: $dark-text;
 
@@ -35,6 +35,7 @@
     width: 45%;
     height: auto;
     padding: 30px;
+    margin: 20px;
 
     border: 1px solid $light-background;
     border-radius: 10px;
@@ -43,14 +44,26 @@
     width: 45%;
     height: auto;
 
-    //border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
 
     .cs-price {
       width: 100%;
       height: auto;
       padding: 20px;
 
+      font-weight: $weight-bold;
+
       font-size: 25px;
+    }
+
+    .cs-VAT {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+
+      font-size: 20px;
     }
 
     button {

@@ -1,15 +1,19 @@
+import { observer } from 'mobx-react';
 import React from 'react';
 import { AppState, MenuPage, OrderPage, Page } from '../AppState';
+import { OrderState } from '../OrderState';
 
 import './delivery-details.scss';
 
 export interface DDProps {
   appState: AppState;
+  orderState: OrderState;
 }
 
+@observer
 export class DeliveryDetails extends React.PureComponent<DDProps> {
   render() {
-    const { appState } = this.props;
+    const { appState, orderState } = this.props;
 
     return (
       <div className={'delivery-details'}>
@@ -24,38 +28,80 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
         </div>
         <form>
           <label>
-            Name
-            <input type='text' name='name' required />
+            Name*
+            <input
+              type='text'
+              name='name'
+              required
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                orderState.setCName(event.target.value)
+              }
+            />
           </label>
           <br></br>
 
           <label>
-            Street Address
-            <input type='text' name='address' required />
+            Street Address*
+            <input
+              type='text'
+              name='address'
+              required
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                orderState.setCStAddress(event.target.value)
+              }
+            />
           </label>
           <br></br>
 
           <label>
-            City
-            <input type='text' name='city' required />
+            City*
+            <input
+              type='text'
+              name='city'
+              required
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                orderState.setCCity(event.target.value)
+              }
+            />
           </label>
           <br></br>
 
           <label>
-            Postcode
-            <input type='text' name='postcode' required />
+            Postcode*
+            <input
+              type='text'
+              name='postcode'
+              required
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                orderState.setCPostcode(event.target.value)
+              }
+            />
           </label>
           <br></br>
 
           <label>
-            Email Address
-            <input type='text' name='email' required />
+            Email Address*
+            <input
+              type='text'
+              name='email'
+              required
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                orderState.setCEmail(event.target.value)
+              }
+            />
           </label>
           <br></br>
 
           <label>
-            Phone Number
-            <input type='number' name='phonenumber' required />
+            Phone Number*
+            <input
+              type='number'
+              name='phonenumber'
+              required
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                orderState.setCPhoneNum(event.target.value)
+              }
+            />
           </label>
           <br></br>
           <br></br>

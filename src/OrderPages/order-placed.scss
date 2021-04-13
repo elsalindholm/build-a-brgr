@@ -5,8 +5,6 @@
   height: auto;
   padding-bottom: 30px;
 
-  border: 1px solid red;
-
   .op-breadcrumbs {
     font-family: $roboto;
     font-size: 15px;
@@ -52,36 +50,70 @@
       width: 100%;
       height: auto;
 
-      border: 1px solid orange;
-
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
 
-      .os-title {
-        font-size: 25px;
-        margin: 20px;
-      }
-
-      .os-item-container {
-        width: 90%;
+      .os-container {
+        width: 45%;
         height: auto;
-        padding: 20px;
 
-        border: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .os-title {
+          font-size: 25px;
+          margin: 20px;
+        }
+
+        .os-item-container {
+          width: 80%;
+          height: auto;
+          padding: 20px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .os-total {
+          margin: 20px;
+          font-size: 30px;
+          font-weight: $weight-bold;
+        }
+      }
+      .dd-container {
+        width: 45%;
+        height: auto;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-      }
+        font-size: 25px;
 
-      .os-total {
-        margin: 20px;
-        font-size: 30px;
-        font-weight: $weight-bold;
+        .dd-title {
+          margin: 10px 0px;
+        }
+
+        .dd-info {
+          font-size: 15px;
+        }
       }
+    }
+
+    button {
+      padding: 5px;
+
+      color: $light-text;
+      font-family: $monserrat;
+      font-weight: $weight-regular;
+      font-size: 20px;
+      background-color: $light-background;
+      border: 3px solid $dark-background;
+      border-radius: 15px;
     }
   }
 }
@@ -101,8 +133,6 @@
     width: 85%;
     height: auto;
     text-align: left;
-
-    border: 1px solid blue;
   }
 
   .os-item-price {
@@ -110,7 +140,6 @@
     height: auto;
 
     text-align: center;
-    border: 1px solid pink;
   }
 }
 
