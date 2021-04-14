@@ -47,79 +47,91 @@
 
 .sustainability-info {
   width: 70%;
+  height: auto;
   padding: 10px 50px;
-  margin: 20px;
+  margin: 80px 20px;
 
   color: $light-text;
 
-  //border: 1px solid white;
-
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 
-.sustainability-info-title {
-  width: 100%;
-  margin: 20px;
+  img {
+    max-width: 30%;
+  }
 
-  text-align: center;
-  font-family: $monserrat;
-  font-weight: $weight-bold;
-  font-size: 35px;
+  .sustainability-info-text-container {
+    width: 55%;
 
-  //border: 1px solid white;
-}
+    .sustainability-info-title {
+      width: 100%;
+      margin: 20px 0px;
 
-.sustainability-info-blurb {
-  width: 100%;
-  margin: 20px;
+      text-align: center;
+      font-family: $monserrat;
+      font-weight: $weight-bold;
+      font-size: 35px;
+      text-align: left;
+    }
 
-  text-align: left;
-  font-family: $monserrat;
-  font-weight: $weight-medium;
-  font-size: 20px;
+    .sustainability-info-blurb {
+      width: 100%;
+      margin: 20px 0px;
 
-  //border: 1px solid white;
-}
+      text-align: left;
+      font-family: $monserrat;
+      font-weight: $weight-medium;
+      font-size: 15px;
+    }
 
-.sustainability-info-list {
-  width: 70%;
-  margin: 20px;
+    .sustainability-info-list-title {
+      font-size: 20px;
+      font-family: $monserrat;
+      font-weight: $weight-semi-bold;
 
-  text-align: left;
-  font-family: $monserrat;
-  font-weight: $weight-medium;
-  font-size: 15px;
+      .sustainability-info-list {
+        width: 90%;
+        margin: 20px;
 
-  .ul {
-    list-style-type: circle;
-    color: $light-text;
-    .li {
-      list-style-type: circle;
+        text-align: left;
+        font-family: $monserrat;
+        font-weight: $weight-medium;
+        font-size: 15px;
+
+        .ul {
+          list-style-type: circle;
+          color: $light-text;
+          .li {
+            list-style-type: circle;
+          }
+        }
+      }
     }
   }
 }
 
 .get-in-touch-container {
-  width: 70%;
-  padding: 10px 50px;
-  margin: 20px;
+  width: 35%;
+
+  margin: 20px 0px;
 
   color: $light-text;
   font-family: $monserrat;
   text-align: center;
-}
-.get-in-touch-title {
-  width: 100%;
-  margin: 20px;
-  font-weight: $weight-bold;
-  font-size: 35px;
-}
 
-.get-in-touch-blurb {
-  width: 100%;
-  margin: 20px;
-  font-weight: $weight-medium;
-  font-size: 15px;
+  .get-in-touch-title {
+    width: 100%;
+    margin: 20px 0px;
+    font-weight: $weight-bold;
+    font-size: 35px;
+  }
+
+  .get-in-touch-blurb {
+    width: 100%;
+    margin: 20px 0px;
+    font-weight: $weight-medium;
+    font-size: 15px;
+  }
 }

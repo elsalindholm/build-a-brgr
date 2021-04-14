@@ -60,6 +60,7 @@
       &:hover {
         color: $dark-background;
         background-color: $light-text;
+        cursor: pointer;
       }
       &:active {
         border: 3px solid $light-background;
@@ -113,6 +114,7 @@
       &:hover {
         color: $dark-background;
         background-color: $light-text;
+        cursor: pointer;
       }
 
       &:active {

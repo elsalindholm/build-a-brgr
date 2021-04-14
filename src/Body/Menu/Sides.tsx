@@ -15,7 +15,7 @@ export class SidesPage extends React.PureComponent<SidesProps> {
     return (
       <div className={'sides-page'}>
         <div className={'sides-page-title'}>Sides</div>
-        <div className={'sides-page-blurb'}>Choose your sides!</div>
+        <div className={'sides-page-blurb'}>What is a burger without a tasty side..</div>
         <div className={'sides-display'}>
           <MenuItemComp menuItem={fries} appState={this.props.appState} />
           <MenuItemComp menuItem={sweetPotatoFries} appState={this.props.appState} />

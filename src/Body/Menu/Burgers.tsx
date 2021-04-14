@@ -54,9 +54,9 @@ export class BurgersPage extends React.PureComponent<BurgerProps> {
       <div className={'burgers-page'}>
         <div className={'title'}>Burgers</div>
         <div className={'blurb'}>
-          Build your own burger by choosing your ingredients from below.
+          Build your own burger by choosing your ingredients from the list below.
         </div>
-        <div className={'blurb'}>All of our burgers come with lettuce.</div>
+        <div className={'blurb'}>Please note that all of our burgers come with lettuce.</div>
         <div className={'blurb'}>Ready, set ...... BUILD!</div>
 
         <div className={'burger-builder'}>

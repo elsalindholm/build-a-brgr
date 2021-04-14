@@ -21,39 +21,46 @@ export class About extends React.PureComponent {
           </p>
           <img src={'/Assets/map.png'} />
         </div>
-        <div className={'sustainability-info'}>
-          <div className={'sustainability-info-title'}>Sustainability</div>
-          <div className={'sustainability-info-blurb'}>
-            We are passionate about sustainability and constantly looking into ways to minimise our
-            environmental impact.
-          </div>
-          <div className={'sustainability-info-blurb'}>
-            Currently we:
-            <div className={'sustainability-info-list'}>
-              <ul>
-                <li>source our ingredients locally whenever possible</li>
-                <li>pay our staff living wage</li>
-                <li>continuously look into ways to improve our packaging to create less waste</li>
-                <li>
-                  look into innovative and delicious ways to get more people excited about
-                  plant-based food
-                </li>
-                <li>we offset our carbon footprint through our partner</li>
-              </ul>
-            </div>
-          </div>
-        </div>
         <div className={'get-in-touch-container'}>
           <div className={'get-in-touch-title'}>Get in touch</div>
           <div className={'get-in-touch-blurb'}>
             Questions, feedback, suggestions or just want to say hello?
           </div>
-          <div className={'get-in-touch-blurb'}>Send us an email and info@buildabrgr.co.uk</div>
-          <div className={'get-in-touch-blurb'}>You can also follow us on Instagram.</div>
+          <div className={'get-in-touch-blurb'}>
+            Send us an email and info@buildabrgr.notarealemail
+          </div>
+          <div className={'get-in-touch-blurb'}>
+            You can also follow us on Instagram and Facebook.
+          </div>
           <div className={'get-in-touch-blurb'}>
             Sign up to our newsletter to receive information about special deals and delicious
             additions to our menu!
           </div>
+        </div>
+        <div className={'sustainability-info'}>
+          <div className={'sustainability-info-text-container'}>
+            <div className={'sustainability-info-title'}>Sustainability</div>
+            <div className={'sustainability-info-blurb'}>
+              We are passionate about sustainability and constantly looking into ways to minimise
+              our environmental impact.
+            </div>
+            <div className={'sustainability-info-list-title'}>
+              Currently we:
+              <div className={'sustainability-info-list'}>
+                <ul>
+                  <li>source our ingredients locally whenever possible</li>
+                  <li>pay our staff living wage</li>
+                  <li>continuously look into ways to improve our packaging to create less waste</li>
+                  <li>
+                    look into innovative and delicious ways to get more people excited about
+                    plant-based food
+                  </li>
+                  <li>we offset our carbon footprint through our partner</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <img src={'/Assets/environment2.png'} />
         </div>
       </div>
     );

@@ -5,7 +5,6 @@
   width: 100%;
   padding: 0px 20px;
 
-  //border: 1px solid red;
   background-color: $dark-background;
 
   display: flex;
@@ -18,7 +17,7 @@
   height: 80%;
   width: 15%;
   padding: 12px;
-  //border: 1px solid green;
+
   color: $light-text;
   font-family: $monserrat;
   font-weight: $weight-bold;
@@ -28,8 +27,6 @@
 .nb-button-container {
   height: 50%;
   width: 40%;
-
-  //border: 1px solid purple;
 
   display: flex;
   flex-direction: row;
@@ -50,6 +47,7 @@
 
   &:hover {
     text-decoration: underline;
+    cursor: pointer;
   }
 }
 
@@ -57,7 +55,6 @@
   height: 50%;
   width: 15%;
 
-  //border: 1px solid pink;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -65,7 +62,7 @@
 
   .header-price {
     padding: 0px 10px;
-    font-style: italic;
+
     color: white;
     font-family: $monserrat;
   }
@@ -77,5 +74,9 @@
     background-image: url('/Assets/shoppingCart.png');
     background-size: cover;
     border-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

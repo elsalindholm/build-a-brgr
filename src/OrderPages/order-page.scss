@@ -34,6 +34,10 @@
     border: 3px solid darkgray;
   }
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &:active {
     color: $dark-text;
     background-color: $light-text;
@@ -60,6 +64,7 @@
 
     &:hover {
       text-decoration: underline;
+      cursor: pointer;
     }
   }
 }

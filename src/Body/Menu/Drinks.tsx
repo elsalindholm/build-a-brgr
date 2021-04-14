@@ -15,7 +15,7 @@ export class DrinksPage extends React.PureComponent<DrinksProps> {
     return (
       <div className={'drinks-page'}>
         <div className={'drinks-page-title'}>Drinks</div>
-        <div className={'drinks-page-blurb'}>Choose your drinks!</div>
+        <div className={'drinks-page-blurb'}>Stay hydrated with our refreshing drinks!</div>
         <div className={'drinks-display'}>
           <MenuItemComp menuItem={pepsiDrink} appState={this.props.appState} />
           <MenuItemComp menuItem={lemonade} appState={this.props.appState} />
