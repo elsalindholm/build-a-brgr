@@ -1,18 +1,5 @@
 @import '../app-styles.scss';
 
-.op-breadcrumbs {
-  font-family: $roboto;
-  font-size: 15px;
-  font-weight: $weight-regular;
-  border-bottom: 3px solid $light-background;
-  margin-bottom: 30px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 .cart-summary-container {
   width: 100%;
   height: auto;

@@ -30,10 +30,11 @@ export class CartState {
   @action public clearCart() {
     this.cartItems = [];
     this.totalPrice = 0;
+    this.vatAmount = 0;
   }
 
   @action public setVat() {
-    this.vatAmount = this.totalPrice * 0.2;
+    this.vatAmount = Math.round(this.totalPrice * 0.2 * 100 + Number.EPSILON) / 100;
   }
 
   @action public canOrder() {

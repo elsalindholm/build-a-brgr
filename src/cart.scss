@@ -55,6 +55,17 @@
 
       background-color: $light-background;
       color: $light-text;
+      outline: none;
+
+      &:hover {
+        color: $dark-background;
+        background-color: $light-text;
+      }
+      &:active {
+        border: 3px solid $light-background;
+        color: $light-text;
+        background-color: $light-background;
+      }
     }
   }
 
@@ -98,6 +109,16 @@
       &:disabled {
         background-color: lightgray;
         border: darkgray;
+      }
+      &:hover {
+        color: $dark-background;
+        background-color: $light-text;
+      }
+
+      &:active {
+        border: 3px solid $light-background;
+        color: $light-text;
+        background-color: $light-background;
       }
     }
   }

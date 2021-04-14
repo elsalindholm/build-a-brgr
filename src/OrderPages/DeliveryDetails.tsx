@@ -18,13 +18,18 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
     return (
       <div className={'delivery-details'}>
         <div className={'op-breadcrumbs'}>
-          <button onClick={() => appState.setCurrentPage(Page.HOME)}>Home</button>
+          <button className={'op-breadcrumbs-btn'} onClick={() => appState.exitOrderFlow()}>
+            Home
+          </button>
           <p>{'>'}</p>
-          <button onClick={() => appState.setCurrentOrderPage(OrderPage.CARTSUMMARY)}>
+          <button
+            className={'op-breadcrumbs-btn'}
+            onClick={() => appState.setCurrentOrderPage(OrderPage.CARTSUMMARY)}
+          >
             Cart Summary
           </button>
           <p>{'>'}</p>
-          <button>Delivery Details</button>
+          <button className={'op-breadcrumbs-btn'}>Delivery Details</button>
         </div>
         <form>
           <label>

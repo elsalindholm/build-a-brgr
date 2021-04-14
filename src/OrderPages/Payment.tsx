@@ -16,17 +16,25 @@ export class PaymentWindow extends React.PureComponent<PWProps> {
     return (
       <div className={'payment-window'}>
         <div className={'op-breadcrumbs'}>
-          <button onClick={() => appState.setCurrentPage(Page.HOME)}>Home</button>
+          <button className={'op-breadcrumbs-btn'} onClick={() => appState.exitOrderFlow()}>
+            Home
+          </button>
           <p>{'>'}</p>
-          <button onClick={() => appState.setCurrentOrderPage(OrderPage.CARTSUMMARY)}>
+          <button
+            className={'op-breadcrumbs-btn'}
+            onClick={() => appState.setCurrentOrderPage(OrderPage.CARTSUMMARY)}
+          >
             Cart Summary
           </button>
           <p>{'>'}</p>
-          <button onClick={() => appState.setCurrentOrderPage(OrderPage.DELIVERYDETAILS)}>
+          <button
+            className={'op-breadcrumbs-btn'}
+            onClick={() => appState.setCurrentOrderPage(OrderPage.DELIVERYDETAILS)}
+          >
             Delivery Details
           </button>
           <p>{'>'}</p>
-          <button>Payment</button>
+          <button className={'op-breadcrumbs-btn'}>Payment</button>
         </div>
         <div className={'payment-window-blurb'}>
           <div>You cannot actually pay on this website.</div>

@@ -17,9 +17,11 @@ export class OrderPlaced extends React.PureComponent<OrPlProps> {
     return (
       <div className={'order-placed'}>
         <div className={'op-breadcrumbs'}>
-          <button onClick={() => appState.setCurrentPage(Page.HOME)}>Home</button>
+          <button className={'op-breadcrumbs-btn'} onClick={() => this.exitCompletedOrder()}>
+            Home
+          </button>
           <p>{'>'}</p>
-          <button>Order Placed</button>
+          <button className={'op-breadcrumbs-btn'}>Order Placed</button>
         </div>
         <div className={'order-details'}>
           <div className={'op-blurb'}>Thank you,</div>
@@ -41,7 +43,7 @@ export class OrderPlaced extends React.PureComponent<OrPlProps> {
               <div className={'dd-info'}>{orderState.cPhoneNum}</div>
             </div>
           </div>
-          <button className={'order-pg-button'} onClick={() => appState.setCurrentPage(Page.HOME)}>
+          <button className={'order-pg-button'} onClick={() => this.exitCompletedOrder()}>
             Return to Build-A-BRGR
           </button>
         </div>
@@ -75,5 +77,14 @@ export class OrderPlaced extends React.PureComponent<OrPlProps> {
     const hours = new Date().getHours() + 1;
     const mins = new Date().getMinutes();
     return `${hours}:${mins}`;
+  }
+
+  private exitCompletedOrder() {
+    const { appState, orderState } = this.props;
+
+    appState.cartState.clearCart();
+    orderState.clearCustomerDetails();
+    appState.setCurrentPage(Page.HOME);
+    appState.setCurrentOrderPage(OrderPage.CARTSUMMARY);
   }
 }

@@ -22,7 +22,7 @@ export class BurgerIngredientComp extends React.PureComponent<BurgerIngredientPr
           {menuItem.vegan && <div className={'vegan'}>VG</div>}
         </div>
         <div className={'bi-price'}>£ {menuItem.price}</div>
-        <button className={'button'} onClick={() => burgerState.addToCart(menuItem)}>
+        <button className={'bi-button'} onClick={() => burgerState.addToCart(menuItem)}>
           {menuItem.buttonTxt}
         </button>
       </div>

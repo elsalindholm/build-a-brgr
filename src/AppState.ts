@@ -47,6 +47,12 @@ export class AppState {
     this.currentOrderPage = orderPage;
   }
 
+  @action public enterOrderFlow() {
+    this.cartOpen = false;
+    this.currentPage = Page.ORDER;
+    this.currentOrderPage = OrderPage.CARTSUMMARY;
+  }
+
   @action public exitOrderFlow() {
     this.currentPage = Page.HOME;
     this.currentOrderPage = OrderPage.CARTSUMMARY;

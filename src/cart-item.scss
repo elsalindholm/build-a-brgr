@@ -35,13 +35,25 @@
       font-size: 20px;
     }
 
-    .button {
+    .ci-button {
       padding: 3px 5px;
       background-color: $dark-background;
       border: 3px solid $light-background;
-      border-radius: 15px;
+      border-radius: 50%;
       color: white;
       font-weight: bold;
+      outline: none;
+
+      &:hover {
+        color: $dark-background;
+        background-color: $light-text;
+      }
+
+      &:active {
+        border: 3px solid $light-background;
+        color: $light-text;
+        background-color: $light-background;
+      }
     }
   }
 }

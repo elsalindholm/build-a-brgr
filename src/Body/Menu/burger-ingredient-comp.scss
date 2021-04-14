@@ -52,12 +52,22 @@
   .bi-price {
     font-size: 15px;
   }
-  .button {
+  .bi-button {
     padding: 5px 10px;
 
     background-color: $light-background;
     color: $light-text;
     border: 3px solid $light-text;
     border-radius: 10px;
+
+    outline: none;
+
+    &:hover {
+      background-color: $dark-background;
+    }
+
+    &:active {
+      border: 3px solid $light-background;
+    }
   }
 }

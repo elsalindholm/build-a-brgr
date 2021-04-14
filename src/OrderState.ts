@@ -47,4 +47,13 @@ export class OrderState {
       this.deliveryButtonDisabled = false;
     }
   }
+
+  @action public clearCustomerDetails() {
+    this.cName = '';
+    this.cStAddress = '';
+    this.cCity = '';
+    this.cPostcode = '';
+    this.cEmail = '';
+    this.cPhoneNum = '';
+  }
 }

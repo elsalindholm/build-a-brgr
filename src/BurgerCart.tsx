@@ -20,12 +20,16 @@ export class BurgerCart extends React.PureComponent<BCProps> {
       <div className={'burger-cart'}>
         <div className={'bg-header'}>
           <div>BRGR BUILDER</div>
-          <button onClick={() => burgerState.clearCart()}>Clear</button>
+          <button className={'bg-button'} onClick={() => burgerState.clearCart()}>
+            Clear
+          </button>
         </div>
         <div className={'bg-items'}>{this.renderBurgerCartItems()}</div>
         <div className={'bg-footer'}>
           <div>Total £ {burgerState.totalPrice} </div>
-          <button onClick={() => this.addBurgerToCart()}>Add to Cart</button>
+          <button className={'bg-button'} onClick={() => this.addBurgerToCart()}>
+            Add to Cart
+          </button>
         </div>
       </div>
     );

@@ -46,6 +46,11 @@
   font-weight: $weight-medium;
 
   border: none;
+  outline: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .cart-container {

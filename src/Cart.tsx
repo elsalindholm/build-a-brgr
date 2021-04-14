@@ -39,7 +39,7 @@ export class Cart extends React.PureComponent<CartProps> {
             <button
               className={'order-button'}
               disabled={cartState.orderButtonDisabled}
-              onClick={() => appState.setCurrentPage(Page.ORDER)}
+              onClick={() => appState.enterOrderFlow()}
             >
               ORDER
             </button>

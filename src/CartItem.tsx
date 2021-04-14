@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ItemType, MenuItem } from './MenuItems';
+import { MenuItem } from './MenuItems';
 
 import './cart-item.scss';
 import { CartState } from './CartState';
@@ -21,7 +21,7 @@ export class CartItem extends React.PureComponent<CartItemProps> {
           <div className={'name'}>{this.props.cartItem.name}</div>
           <div className={'ci-price'}>£ {this.props.cartItem.price}</div>
           <button
-            className={'button'}
+            className={'ci-button'}
             onClick={() => this.props.cartState.removeFromCart(this.props.position)}
           >
             X

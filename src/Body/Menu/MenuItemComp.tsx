@@ -26,7 +26,7 @@ export class MenuItemComp extends React.PureComponent<MicProps> {
           {menuItem.vegan && <div className={'vegan'}>VG</div>}
         </div>
         <div className={'price'}>£ {menuItem.price}</div>
-        <button className={'button'} onClick={() => appState.cartState.addToCart(menuItem)}>
+        <button className={'mic-button'} onClick={() => appState.cartState.addToCart(menuItem)}>
           {menuItem.buttonTxt}
         </button>
       </div>

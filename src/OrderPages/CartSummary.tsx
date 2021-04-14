@@ -18,9 +18,11 @@ export class CartSummary extends React.PureComponent<CSProps> {
     return (
       <div>
         <div className={'op-breadcrumbs'}>
-          <button onClick={() => appState.setCurrentPage(Page.HOME)}>Home</button>
+          <button className={'op-breadcrumbs-btn'} onClick={() => appState.exitOrderFlow()}>
+            Home
+          </button>
           <p>{'>'}</p>
-          <button>Cart Summary</button>
+          <button className={'op-breadcrumbs-btn'}>Cart Summary</button>
         </div>
         <div className={'cart-summary-container'}>
           <div className={'cart-summary'}>{this.renderCartSummary()}</div>

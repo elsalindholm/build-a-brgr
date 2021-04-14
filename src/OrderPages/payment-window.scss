@@ -4,25 +4,6 @@
   width: 100%;
   height: auto;
 
-  .op-breadcrumbs {
-    font-family: $roboto;
-    font-size: 15px;
-    font-weight: $weight-regular;
-    border-bottom: 3px solid $light-background;
-    margin-bottom: 30px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-
-    button {
-      padding: 0px 10px;
-      background-color: white;
-      border: none;
-    }
-  }
-
   .payment-window-blurb {
     width: 100%;
     height: auto;
@@ -31,17 +12,5 @@
     font-family: $monserrat;
     font-size: 35px;
     text-align: center;
-
-    button {
-      margin: 50px;
-      padding: 5px;
-
-      color: $light-text;
-      font-family: $monserrat;
-      font-size: 20px;
-      background-color: $light-background;
-      border: 3px solid $dark-background;
-      border-radius: 10px;
-    }
   }
 }
