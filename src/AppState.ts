@@ -19,7 +19,7 @@ export enum OrderPage {
   CARTSUMMARY = 'cartSummary',
   DELIVERYDETAILS = 'deliveryDetails',
   PAYMENT = 'payment',
-  ORDERPLACED = 'orderPaced',
+  ORDERPLACED = 'orderPlaced',
 }
 
 export class AppState {

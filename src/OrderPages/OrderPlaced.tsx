@@ -83,7 +83,7 @@ export class OrderPlaced extends React.PureComponent<OrPlProps> {
     const { appState, orderState } = this.props;
 
     appState.cartState.clearCart();
-    orderState.clearCustomerDetails();
+    //  orderState.clearCustomerDetails();
     appState.setCurrentPage(Page.HOME);
     appState.setCurrentOrderPage(OrderPage.CARTSUMMARY);
   }

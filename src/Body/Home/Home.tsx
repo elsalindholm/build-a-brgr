@@ -22,9 +22,9 @@ export class Home extends React.PureComponent {
             <img src={'/Assets/map.png'} />
           </div>
           <div className={'map-blurb-container'}>
-            We currently deliver within the Falkirk Council area. We are also looking into expanding
-            into Edinburgh and Glasgow. Please follow us on social media to receive further updates
-            on our plans to conquer the world (or at least Central Scotland).
+            We currently deliver within the Falkirk Council area. We are also looking to expand into
+            Edinburgh and Glasgow. Please follow us on social media to receive further updates on
+            our plans to conquer the world (or at least Central Scotland).
           </div>
         </div>
       </div>

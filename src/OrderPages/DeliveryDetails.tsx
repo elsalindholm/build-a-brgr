@@ -24,7 +24,9 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
           <p>{'>'}</p>
           <button
             className={'op-breadcrumbs-btn'}
-            onClick={() => appState.setCurrentOrderPage(OrderPage.CARTSUMMARY)}
+            onClick={() => {
+              appState.setCurrentOrderPage(OrderPage.CARTSUMMARY);
+            }}
           >
             Cart Summary
           </button>

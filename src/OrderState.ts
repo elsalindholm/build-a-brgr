@@ -36,16 +36,15 @@ export class OrderState {
   }
 
   @action public validateInput() {
-    if (
+    const ok =
       this.cName.length > 2 &&
       this.cStAddress.length > 2 &&
       this.cCity.length > 2 &&
       this.cPostcode.length > 2 &&
       this.cEmail.length > 2 &&
-      this.cPhoneNum.length > 2
-    ) {
-      this.deliveryButtonDisabled = false;
-    }
+      this.cPhoneNum.length > 2;
+
+    this.deliveryButtonDisabled = !ok;
   }
 
   @action public clearCustomerDetails() {

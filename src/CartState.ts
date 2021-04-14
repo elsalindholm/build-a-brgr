@@ -18,12 +18,9 @@ export class CartState {
 
   @action public removeFromCart(idx: number) {
     const removedItem = this.cartItems[idx];
-
     this.totalPrice -= removedItem.price;
     this.setVat();
-
     this.cartItems.splice(idx, 1);
-
     this.canOrder();
   }
 
@@ -31,6 +28,7 @@ export class CartState {
     this.cartItems = [];
     this.totalPrice = 0;
     this.vatAmount = 0;
+    this.canOrder();
   }
 
   @action public setVat() {
@@ -38,10 +36,6 @@ export class CartState {
   }
 
   @action public canOrder() {
-    if (this.cartItems.length > 0) {
-      this.orderButtonDisabled = false;
-    } else {
-      this.orderButtonDisabled = true;
-    }
+    this.orderButtonDisabled = this.cartItems.length === 0;
   }
 }
