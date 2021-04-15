@@ -1,6 +1,8 @@
 import { observer } from 'mobx-react';
 import React from 'react';
+
 import { Page, AppState } from './AppState';
+
 import './header.scss';
 
 interface HeaderProps {

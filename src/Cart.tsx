@@ -1,13 +1,12 @@
 import React from 'react';
+import { observer } from 'mobx-react';
 
 import { CartState } from './CartState';
+import { CartItem } from './CartItem';
+import { BurgerItem, ItemType } from './MenuItems';
+import { AppState } from './AppState';
 
 import './cart.scss';
-
-import { CartItem } from './CartItem';
-import { observer } from 'mobx-react';
-import { BurgerItem, ItemType } from './MenuItems';
-import { AppState, Page } from './AppState';
 
 interface CartProps {
   open: boolean;

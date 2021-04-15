@@ -7,10 +7,10 @@ import { Home } from './Body/Home/Home';
 import { Menu } from './Body/Menu/Menu';
 import { Footer } from './Footer';
 import { Header } from './Header';
-
-import './app.scss';
 import { Cart } from './Cart';
 import { OrderPageComp } from './OrderPages/OrderPage';
+
+import './app.scss';
 
 @observer
 export class App extends React.PureComponent {

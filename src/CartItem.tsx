@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { MenuItem } from './MenuItems';
+import { CartState } from './CartState';
 
 import './cart-item.scss';
-import { CartState } from './CartState';
 
 export interface CartItemProps {
   cartItem: MenuItem;

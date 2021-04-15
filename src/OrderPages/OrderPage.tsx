@@ -1,14 +1,15 @@
 import { observer } from 'mobx-react';
 import React from 'react';
+
 import { AppState, OrderPage } from '../AppState';
 import { OrderState } from '../OrderState';
 import { CartSummary } from './CartSummary';
 import { DeliveryDetails } from './DeliveryDetails';
 import { OPHeader } from './OPHeader';
-
-import './order-page.scss';
 import { OrderPlaced } from './OrderPlaced';
 import { PaymentWindow } from './Payment';
+
+import './order-page.scss';
 
 interface OPProps {
   appState: AppState;

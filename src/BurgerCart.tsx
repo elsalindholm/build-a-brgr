@@ -1,10 +1,11 @@
 import { observer } from 'mobx-react';
 import React from 'react';
 
-import './burger-cart.scss';
 import { CartItem } from './CartItem';
 import { CartState } from './CartState';
 import { BurgerItem, MenuItem, ItemType } from './MenuItems';
+
+import './burger-cart.scss';
 
 interface BCProps {
   burgerState: CartState;

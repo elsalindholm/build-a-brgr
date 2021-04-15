@@ -1,5 +1,3 @@
-import { EnumDeclaration } from 'typescript';
-
 export enum ItemType {
   GENERAL = 'general',
   BURGER = 'burger',

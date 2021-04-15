@@ -11,7 +11,6 @@
   top: 0;
   right: 0;
   transform-origin: 87% 6%;
-  //transition-property: z-index;
   transition: all 0.2s linear;
 
   font-family: $monserrat;
@@ -32,11 +31,8 @@
 
   .header {
     width: 90%;
-
     margin: 10px;
     padding: 5px;
-
-    //border: 1px solid red;
 
     display: flex;
     flex-direction: row;
@@ -86,11 +82,8 @@
 
   .footer {
     width: 90%;
-
     margin: 10px;
     padding: 5px;
-
-    //border: 1px solid red;
 
     display: flex;
     flex-direction: row;
@@ -106,6 +99,7 @@
       color: $light-text;
       font-family: $monserrat;
       font-weight: $weight-semi-bold;
+      outline: none;
 
       &:disabled {
         background-color: lightgray;

@@ -1,6 +1,7 @@
 import { observer } from 'mobx-react';
 import React from 'react';
-import { AppState, MenuPage, OrderPage, Page } from '../AppState';
+
+import { AppState, OrderPage } from '../AppState';
 import { OrderState } from '../OrderState';
 
 import './delivery-details.scss';
@@ -46,7 +47,6 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
               }
             />
           </label>
-          <br></br>
 
           <label>
             Street Address*
@@ -60,7 +60,6 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
               }
             />
           </label>
-          <br></br>
 
           <label>
             City*
@@ -74,7 +73,6 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
               }
             />
           </label>
-          <br></br>
 
           <label>
             Postcode*
@@ -88,12 +86,11 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
               }
             />
           </label>
-          <br></br>
 
           <label>
             Email Address*
             <input
-              type='text'
+              type='email'
               name='email'
               required
               value={orderState.cEmail}
@@ -102,12 +99,11 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
               }
             />
           </label>
-          <br></br>
 
           <label>
             Phone Number*
             <input
-              type='number'
+              type='tel'
               name='phonenumber'
               required
               value={orderState.cPhoneNum}
@@ -116,9 +112,6 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
               }
             />
           </label>
-          <br></br>
-          <br></br>
-          <br></br>
 
           <button
             className={'order-pg-button'}

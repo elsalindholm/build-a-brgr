@@ -27,13 +27,13 @@ export class AppState {
 
   @observable public cartOpen: boolean = false;
 
-  @action public setCartOpen(open: boolean) {
-    this.cartOpen = open;
-  }
-
   @observable public currentPage = Page.HOME;
   @observable public currentMenuPage = MenuPage.BURGERS;
   @observable public currentOrderPage = OrderPage.CARTSUMMARY;
+
+  @action public setCartOpen(open: boolean) {
+    this.cartOpen = open;
+  }
 
   @action public setCurrentPage(page: Page) {
     this.currentPage = page;

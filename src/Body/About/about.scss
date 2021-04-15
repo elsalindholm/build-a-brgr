@@ -17,8 +17,6 @@
   padding: 20px;
   margin: 20px;
 
-  //border: 1px solid white;
-
   color: $light-text;
   text-align: center;
   font-family: $monserrat;
@@ -36,8 +34,6 @@
   font-family: $monserrat;
   font-weight: $weight-regular;
   font-size: 25px;
-
-  //border: 1px solid white;
 
   display: flex;
   flex-direction: row;
@@ -63,7 +59,7 @@
   }
 
   .sustainability-info-text-container {
-    width: 55%;
+    width: 60%;
 
     .sustainability-info-title {
       width: 100%;
@@ -83,22 +79,22 @@
       text-align: left;
       font-family: $monserrat;
       font-weight: $weight-medium;
-      font-size: 15px;
+      font-size: 25px;
     }
 
     .sustainability-info-list-title {
-      font-size: 20px;
+      font-size: 30px;
       font-family: $monserrat;
       font-weight: $weight-semi-bold;
 
       .sustainability-info-list {
         width: 90%;
-        margin: 20px;
+        margin: 25px;
 
         text-align: left;
         font-family: $monserrat;
         font-weight: $weight-medium;
-        font-size: 15px;
+        font-size: 20px;
 
         .ul {
           list-style-type: circle;
@@ -113,7 +109,7 @@
 }
 
 .get-in-touch-container {
-  width: 35%;
+  width: 60%;
 
   margin: 20px 0px;
 
@@ -132,6 +128,6 @@
     width: 100%;
     margin: 20px 0px;
     font-weight: $weight-medium;
-    font-size: 15px;
+    font-size: 25px;
   }
 }

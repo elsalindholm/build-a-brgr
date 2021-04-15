@@ -1,5 +1,6 @@
 import React from 'react';
-import { AppState, OrderPage, Page } from '../AppState';
+
+import { AppState, OrderPage } from '../AppState';
 import { OrderState } from '../OrderState';
 
 import './payment-window.scss';

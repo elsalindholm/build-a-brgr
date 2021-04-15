@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { AppState } from '../../AppState';
 import { BurgerCart } from '../../BurgerCart';
 import { CartState } from '../../CartState';
@@ -38,7 +39,6 @@ import {
 import { BurgerIngredientComp } from './BurgerIngredientComp';
 
 import './burgers.scss';
-import { MenuItemComp } from './MenuItemComp';
 
 interface BurgerProps {
   appState: AppState;

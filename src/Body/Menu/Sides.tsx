@@ -1,10 +1,10 @@
 import React from 'react';
-import { MenuItemComp } from './MenuItemComp';
 
+import { MenuItemComp } from './MenuItemComp';
 import { fries, sweetPotatoFries, houseSlaw, kimchiFries } from '../../MenuItems';
+import { AppState } from '../../AppState';
 
 import './sides.scss';
-import { AppState } from '../../AppState';
 
 export interface SidesProps {
   appState: AppState;

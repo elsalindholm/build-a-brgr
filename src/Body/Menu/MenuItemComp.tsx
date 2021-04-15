@@ -1,6 +1,5 @@
 import React from 'react';
 import { AppState } from '../../AppState';
-import { CartState } from '../../CartState';
 
 import { MenuItem } from '../../MenuItems';
 

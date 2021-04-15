@@ -1,6 +1,7 @@
 import { observer } from 'mobx-react';
 import React from 'react';
-import { AppState, OrderPage, Page } from '../AppState';
+
+import { AppState, OrderPage } from '../AppState';
 import { CartItem } from '../CartItem';
 import { BurgerItem, ItemType } from '../MenuItems';
 

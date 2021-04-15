@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './drinks.scss';
 import { MenuItemComp } from './MenuItemComp';
-
 import { beer, fizzyElderflower, lemonade, pepsiDrink } from '../../MenuItems';
 import { AppState } from '../../AppState';
+
+import './drinks.scss';
 
 interface DrinksProps {
   appState: AppState;
