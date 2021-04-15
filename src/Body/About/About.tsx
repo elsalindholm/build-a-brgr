@@ -8,7 +8,7 @@ export class About extends React.PureComponent {
       <div className={'about-page'}>
         <div className={'about-title'}>About Build-A-BRGR</div>
         <div className={'about-blurb-container'}>
-          <img src={'/Assets/burger.png'} />
+          <img src={'/assets/burger.png'} />
           <p>
             We are passionate about sharing our love of burgers with you and bringing the best
             burgers to you!
@@ -20,7 +20,7 @@ export class About extends React.PureComponent {
             in 2020 and we are hoping to expand further across the Central Belt and into Glasgow and
             Edinburgh.
           </p>
-          <img src={'/Assets/map.png'} />
+          <img src={'/assets/map.png'} />
         </div>
         <div className={'get-in-touch-container'}>
           <div className={'get-in-touch-title'}>Get in touch</div>
@@ -61,7 +61,7 @@ export class About extends React.PureComponent {
               </div>
             </div>
           </div>
-          <img src={'/Assets/environment2.png'} />
+          <img src={'/assets/environment2.png'} />
         </div>
       </div>
     );

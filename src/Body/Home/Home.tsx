@@ -8,7 +8,7 @@ export class Home extends React.PureComponent {
       <div className={'home-page'}>
         <div className={'home-page-title'}>Welcome to Build-A-BRGR</div>
         <div className={'burger-image-container'}>
-          <img src={'/Assets/burger.png'} />
+          <img src={'/assets/burger.png'} />
         </div>
         <div className={'home-pg-blurb'}>
           Build a burger and get it delivered straight to your door!
@@ -19,7 +19,7 @@ export class Home extends React.PureComponent {
         </div>
         <div className={'home-pg-blurb-map'}>
           <div className={'map-image-container'}>
-            <img src={'/Assets/map.png'} />
+            <img src={'/assets/map.png'} />
           </div>
           <div className={'map-blurb-container'}>
             We currently deliver within the Falkirk Council area. We are also looking to expand into

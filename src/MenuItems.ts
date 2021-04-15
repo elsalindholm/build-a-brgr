@@ -27,7 +27,7 @@ export const fries: MenuItem = {
   vegan: true,
   buttonTxt: 'Add to Cart',
   type: ItemType.GENERAL,
-  image: '/Assets/potato.jpg',
+  image: '/assets/potato.jpg',
 };
 
 export const sweetPotatoFries: MenuItem = {
@@ -38,7 +38,7 @@ export const sweetPotatoFries: MenuItem = {
   vegan: true,
   buttonTxt: 'Add to Cart',
   type: ItemType.GENERAL,
-  image: '/Assets/sweetpotato.jpg',
+  image: '/assets/sweetpotato.jpg',
 };
 
 export const houseSlaw: MenuItem = {
@@ -49,7 +49,7 @@ export const houseSlaw: MenuItem = {
   vegan: false,
   buttonTxt: 'Add to Cart',
   type: ItemType.GENERAL,
-  image: '/Assets/cabbage2.jpg',
+  image: '/assets/cabbage2.jpg',
 };
 
 export const kimchiFries: MenuItem = {
@@ -60,7 +60,7 @@ export const kimchiFries: MenuItem = {
   vegan: false,
   buttonTxt: 'Add to Cart',
   type: ItemType.GENERAL,
-  image: '/Assets/frieswithtopping.jpg',
+  image: '/assets/frieswithtopping.jpg',
 };
 
 /////////////// drinks
@@ -73,7 +73,7 @@ export const pepsiDrink: MenuItem = {
   vegan: true,
   buttonTxt: 'Add to Cart',
   type: ItemType.GENERAL,
-  image: '/Assets/pepsi.jpg',
+  image: '/assets/pepsi.jpg',
 };
 
 export const lemonade: MenuItem = {
@@ -84,7 +84,7 @@ export const lemonade: MenuItem = {
   vegan: false,
   buttonTxt: 'Add to Cart',
   type: ItemType.GENERAL,
-  image: '/Assets/lemonade.jpg',
+  image: '/assets/lemonade.jpg',
 };
 
 export const fizzyElderflower: MenuItem = {
@@ -95,7 +95,7 @@ export const fizzyElderflower: MenuItem = {
   vegan: true,
   buttonTxt: 'Add to Cart',
   type: ItemType.GENERAL,
-  image: '/Assets/elderflower.jpg',
+  image: '/assets/elderflower.jpg',
 };
 
 export const beer: MenuItem = {
@@ -106,7 +106,7 @@ export const beer: MenuItem = {
   vegan: true,
   buttonTxt: 'Add to Cart',
   type: ItemType.GENERAL,
-  image: '/Assets/beer.jpg',
+  image: '/assets/beer.jpg',
 };
 
 ///// burger toppings
