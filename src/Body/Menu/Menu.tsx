@@ -36,19 +36,19 @@ export class Menu extends React.PureComponent<MenuProps> {
         <div className={'menu-header'}>
           <div className={'menu-nb-button-container'}>
             <button
-              className={'menu-nb-button'}
+              className={this.getClassName(MenuPage.BURGERS)}
               onClick={() => this.props.appState.setCurrentMenuPage(MenuPage.BURGERS)}
             >
               Burgers
             </button>
             <button
-              className={'menu-nb-button'}
+              className={this.getClassName(MenuPage.SIDES)}
               onClick={() => this.props.appState.setCurrentMenuPage(MenuPage.SIDES)}
             >
               Sides
             </button>
             <button
-              className={'menu-nb-button'}
+              className={this.getClassName(MenuPage.DRINKS)}
               onClick={() => this.props.appState.setCurrentMenuPage(MenuPage.DRINKS)}
             >
               Drinks
@@ -58,5 +58,15 @@ export class Menu extends React.PureComponent<MenuProps> {
         <div className={'menu-sub-page-container'}>{menuPage}</div>
       </div>
     );
+  }
+
+  private getClassName(heading: MenuPage) {
+    let normal = 'menu-nb-button';
+
+    const current = this.props.appState.currentMenuPage;
+    if (heading === current) {
+      normal += ' selected-menu';
+    }
+    return normal;
   }
 }

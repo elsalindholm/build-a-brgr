@@ -4,25 +4,25 @@ import { observer } from 'mobx-react';
 import { CartState } from './CartState';
 import { CartItem } from './CartItem';
 import { BurgerItem, ItemType } from './MenuItems';
-import { AppState } from './AppState';
 
 import './cart.scss';
+import { CartStage } from './AppState';
 
 interface CartProps {
-  open: boolean;
+  stage: CartStage;
   onClose: () => void;
   cartState: CartState;
-  appState: AppState;
+  onOrder: () => void;
+  onClosed: () => void;
 }
 
 @observer
 export class Cart extends React.PureComponent<CartProps> {
   public render() {
-    const { open, onClose, appState, cartState } = this.props;
-    const openClass = open ? 'open' : 'closed';
+    const { stage, onClose, cartState, onOrder, onClosed } = this.props;
 
     return (
-      <div className={'cart ' + openClass}>
+      <div className={'cart ' + stage} onAnimationEnd={() => onClosed()}>
         <div className={'header'}>
           <div className={'title'}>CART</div>
           <div className={'close-cart'}>
@@ -38,7 +38,7 @@ export class Cart extends React.PureComponent<CartProps> {
             <button
               className={'order-button'}
               disabled={cartState.orderButtonDisabled}
-              onClick={() => appState.enterOrderFlow()}
+              onClick={() => onOrder()}
             >
               ORDER
             </button>

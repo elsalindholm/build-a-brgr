@@ -23,7 +23,7 @@ export class CartSummary extends React.PureComponent<CSProps> {
             Home
           </button>
           <p>{'>'}</p>
-          <button className={'op-breadcrumbs-btn'}>Cart Summary</button>
+          <button className={'op-breadcrumbs-btn' + ' selected'}>Cart Summary</button>
         </div>
         <div className={'cart-summary-container'}>
           <div className={'cart-summary'}>{this.renderCartSummary()}</div>

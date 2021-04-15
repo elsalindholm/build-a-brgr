@@ -41,10 +41,11 @@ export class App extends React.PureComponent {
     return (
       <>
         <Cart
-          open={this.appState.cartOpen}
-          onClose={() => this.appState.setCartOpen(false)}
+          stage={this.appState.cartOpen}
+          onClose={() => this.appState.setCartClosing()}
           cartState={this.appState.cartState}
-          appState={this.appState}
+          onOrder={() => this.appState.enterOrderFlow()}
+          onClosed={() => this.appState.setCartClosed()}
         />
         <Header appState={this.appState} />
         <div className={'body'}>

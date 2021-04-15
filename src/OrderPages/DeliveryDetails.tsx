@@ -32,7 +32,7 @@ export class DeliveryDetails extends React.PureComponent<DDProps> {
             Cart Summary
           </button>
           <p>{'>'}</p>
-          <button className={'op-breadcrumbs-btn'}>Delivery Details</button>
+          <button className={'op-breadcrumbs-btn' + ' selected'}>Delivery Details</button>
         </div>
         <form>
           <label>

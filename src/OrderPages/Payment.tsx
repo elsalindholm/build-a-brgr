@@ -35,7 +35,7 @@ export class PaymentWindow extends React.PureComponent<PWProps> {
             Delivery Details
           </button>
           <p>{'>'}</p>
-          <button className={'op-breadcrumbs-btn'}>Payment</button>
+          <button className={'op-breadcrumbs-btn' + ' selected'}>Payment</button>
         </div>
         <div className={'payment-window-blurb'}>
           <div>You cannot actually pay on this website.</div>

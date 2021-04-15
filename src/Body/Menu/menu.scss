@@ -50,6 +50,10 @@
     text-decoration: underline;
     cursor: pointer;
   }
+
+  &.selected-menu {
+    text-decoration: underline;
+  }
 }
 
 .menu-sub-page-container {
