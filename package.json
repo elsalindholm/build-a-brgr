@@ -17,7 +17,7 @@
     "typescript",
     "webpack"
   ],
-  "author": "Matt",
+  "author": "Elsa",
   "license": "MIT",
   "dependencies": {
     "@blueprintjs/select": "^3.13.7",
