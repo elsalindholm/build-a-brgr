@@ -38,7 +38,7 @@ export const sweetPotatoFries: MenuItem = {
   vegan: true,
   buttonTxt: 'Add to Cart',
   type: ItemType.GENERAL,
-  image: '/assets/sweetpotato.jpg',
+  image: '../assets/sweetpotato.jpg',
 };
 
 export const houseSlaw: MenuItem = {
