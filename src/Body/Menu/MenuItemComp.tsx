@@ -16,9 +16,7 @@ export class MenuItemComp extends React.PureComponent<MicProps> {
 
     return (
       <div className={'menu-item'}>
-        <div className={'img-container'}>
-          <img src={menuItem.image} alt={menuItem.name}></img>
-        </div>
+        <div className={'img-container ' + menuItem.image}></div>
         <div className={'name'}>{menuItem.name}</div>
         <div className={'dietary-info'}>
           {menuItem.vegetarian && <div className={'vegetarian'}>V</div>}

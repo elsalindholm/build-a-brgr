@@ -26,8 +26,7 @@
 
 .about-blurb-container {
   width: 70%;
-  padding: 10px 100px;
-  margin: 20px;
+  padding: 0px 100px;
 
   color: $light-text;
   text-align: center;
@@ -39,6 +38,29 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+
+  p {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.about-brgr-image {
+  background-image: url('../../../dist/assets/burger.png');
+  height: 400px;
+  width: 400px;
+  margin: 0px 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.about-map-image {
+  background-image: url('../../../dist/assets/map.png');
+  height: 400px;
+  width: 400px;
+  margin: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .sustainability-info {
@@ -54,8 +76,13 @@
   justify-content: space-around;
   align-items: center;
 
-  img {
-    max-width: 30%;
+  .about-sustainability-image {
+    background-image: url('../../../dist/assets/environment2.png');
+    height: 410px;
+    width: 450px;
+    margin: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .sustainability-info-text-container {

@@ -22,10 +22,8 @@
     width: 120px;
     overflow: hidden;
 
-    img {
-      max-height: 120px;
-      max-width: 120px;
-    }
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .name {
     font-size: 20px;
@@ -83,4 +81,38 @@
       border: 3px solid $light-background;
     }
   }
+}
+
+//background images for menu items
+
+.fries {
+  background-image: url('../../../dist/assets/potato.jpg');
+}
+
+.sweet-potato {
+  background-image: url('../../../dist/assets/sweetpotato.jpg');
+}
+
+.house-slaw {
+  background-image: url('../../../dist/assets/cabbage2.jpg');
+}
+
+.kimchi-fries {
+  background-image: url('../../../dist/assets/frieswithtopping.jpg');
+}
+
+.pepsi-drink {
+  background-image: url('../../../dist/assets/pepsi.jpg');
+}
+
+.lemonade {
+  background-image: url('../../../dist/assets/lemonade.jpg');
+}
+
+.elderflower-fizz {
+  background-image: url('../../../dist/assets/elderflower.jpg');
+}
+
+.beer {
+  background-image: url('../../../dist/assets/beer.jpg');
 }
